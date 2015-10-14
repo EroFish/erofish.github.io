@@ -46,7 +46,7 @@
 <meta property="og:site_name" content="十八仙僧の理想国">
 <meta property="og:description" content="这里记载了我这几天搭建Hexo的一些重要备忘信息。">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/84262938jw1ex0twrgud9j20go07awfa.jpg">
-<meta property="og:updated_time" content="2015-10-14T10:15:24.516Z">
+<meta property="og:updated_time" content="2015-10-14T10:26:22.341Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 搭建备忘">
 <meta name="twitter:description" content="这里记载了我这几天搭建Hexo的一些重要备忘信息。">
@@ -273,235 +273,12 @@ git config --global user<span class="class">.email</span> <span class="string">"
 </blockquote>
 <pre><code>hexo clean &amp;&amp; hexo <span class="keyword">g</span> &amp;&amp; hexo <span class="literal">d</span>
 </code></pre><h1 id="Hexo主题">Hexo主题</h1><p>主题文件是<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">Next</a>，安装及配置方法详见：<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT 使用文档</a>。</p>
-<h1 id="配置文件">配置文件</h1><h2 id="站点配置文件：">站点配置文件：</h2><pre><code><span class="preprocessor"># Hexo Configuration</span>
-<span class="preprocessor">## Docs: http://hexo.io/docs/configuration.html</span>
-<span class="preprocessor">## Source: https://github.com/hexojs/hexo/</span>
-
-<span class="preprocessor"># Site</span>
-title: 十八仙僧の理想国
-subtitle: 思考 整理 分享
-description: 基因决定人, 环境决定成长, 平台决定层次, 机遇决定成就.
-author: 十八仙僧
-email: zhaishiba@gmail.com
-language: zh-Hans
-
-<span class="preprocessor"># URL</span>
-<span class="preprocessor">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span>
-url: http:<span class="comment">//erofish.github.io</span>
-root: /
-permalink: :year/:month/:day/:title/
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
-code_dir: downloads/code
-permalink_defaults: /<span class="number">404.</span>html
-
-<span class="preprocessor"># Directory</span>
-source_dir: source
-public_dir: <span class="keyword">public</span>
-
-<span class="preprocessor"># Writing</span>
-new_post_name: :title.md # File name of <span class="keyword">new</span> posts
-default_layout: post
-titlecase: <span class="literal">false</span> # Transform title into titlecase
-external_link: <span class="literal">true</span> # Open external links in <span class="keyword">new</span> tab
-filename_case: <span class="number">0</span>
-render_drafts: <span class="literal">false</span>
-post_asset_folder: <span class="literal">false</span>
-relative_link: <span class="literal">false</span>
-highlight:
-  enable: <span class="literal">true</span>
-  line_number: <span class="literal">true</span>
-  tab_replace:
-
-<span class="preprocessor"># Category &amp; Tag</span>
-default_category: uncategorized
-category_map:
-tag_map:
-
-<span class="preprocessor"># Archives</span>
-<span class="preprocessor">## 2: Enable pagination</span>
-<span class="preprocessor">## 1: Disable pagination</span>
-<span class="preprocessor">## 0: Fully Disable</span>
-archive: <span class="number">1</span>
-category: <span class="number">1</span>
-tag: <span class="number">1</span>
-
-<span class="preprocessor"># Pagination</span>
-<span class="preprocessor">## Set per_page to 0 to disable pagination</span>
-per_page: <span class="number">100</span>
-pagination_dir: page
-
-<span class="preprocessor"># Server</span>
-<span class="preprocessor">## Hexo uses Connect as a server</span>
-<span class="preprocessor">## You can customize the logger format as defined in</span>
-<span class="preprocessor">## http://www.senchalabs.org/connect/logger.html</span>
-port: <span class="number">4000</span>
-server_ip: localhost
-logger: <span class="literal">false</span>
-logger_format: dev
-
-<span class="preprocessor"># Date / Time format</span>
-<span class="preprocessor">## Hexo uses Moment.js to parse and display date</span>
-<span class="preprocessor">## You can customize the date format as defined in</span>
-<span class="preprocessor">## http://momentjs.com/docs/#/displaying/format/</span>
-date_format: YYYY/MM/DD
-time_format: HH:mm:ss
-
-<span class="preprocessor"># Extensions</span>
-<span class="preprocessor">## Plugins: https://github.com/hexojs/hexo/wiki/Plugins</span>
-Plugins:
-    - hexo-generator-feed
-    - hexo-generator-sitemap
-
-<span class="preprocessor">## Feed Atom</span>
-feed:
-   type: atom
-   path: atom.xml
-   limit: <span class="number">20</span>
-
-<span class="preprocessor">## sitemap</span>
-sitemap:
-    path: sitemap.xml     
-
-<span class="preprocessor"># ===================================================================================</span>
-<span class="preprocessor">#用户自定义段开始</span>
-<span class="preprocessor">#====================================================================================</span>
-
-avatar: /uploads/avatar.jpg
-
-<span class="preprocessor"># 多说评论系统</span>
-duoshuo_shortname: erofish
-
-<span class="preprocessor"># 百度分析ID</span>
-baidu_analytics: <span class="number">3e0</span>f7bc4a598dfd178c5e45a195ba929
-
-<span class="preprocessor"># 百度分享服务</span>
-baidushare: <span class="literal">true</span>
-
-<span class="preprocessor"># Swiftype Search Key</span>
-swiftype_key: uBCMvYTzRxi2_CRLzt2g
-
-<span class="preprocessor"># 多说热评文章 true 或者 false</span>
-duoshuo_hotartical: <span class="literal">true</span>
-
-<span class="preprocessor"># Social links</span>
-social:
-  GitHub: https:<span class="comment">//github.com/erofish</span>
-  Weibo: http:<span class="comment">//weibo.com/erofish</span>
-  ZhiHu: http:<span class="comment">//www.zhihu.com/people/erofish</span>
-
-<span class="preprocessor"># ===================================================================================</span>
-<span class="preprocessor">#用户自定义段结束</span>
-<span class="preprocessor"># ===================================================================================</span>
-
-<span class="preprocessor">## Themes: https://github.com/hexojs/hexo/wiki/Themes</span>
-theme: next
-exclude_generator:
-
-<span class="preprocessor"># Deployment</span>
-<span class="preprocessor">## Docs: http://hexo.io/docs/deployment.html</span>
-deploy:
-  type: git
-  repository: git@github.com:EroFish/erofish.github.io.git
-  branch: master
-</code></pre><h2 id="主题配置文件">主题配置文件</h2><pre><code><span class="preprocessor"># when running hexo in a subdirectory (e.g. domain.tld/blog), remove leading slashes ( "/archives" -&gt; "archives" )</span>
-menu:
-  home: /
-  archives: /archives
-  categories: /categories
-  tags: /tags
-  about: /about
-
-<span class="preprocessor"># Favicon</span>
-<span class="preprocessor"># 从`Next 0.2`起，favicon将不再放置于主题之内。</span>
-<span class="preprocessor"># 请将你的favicon放置在`hexo-site/source/`目录下。</span>
-favicon: /favicon.ico
-
-<span class="preprocessor"># Set default keywords (Use a comma to separate)</span>
-keywords: <span class="string">"Hexo,next"</span>
-
-<span class="preprocessor"># 设置为`false`不显示`rss`链接</span>
-<span class="preprocessor"># 留空，并且通过`hexo-site-feed`插件配置使用默认的feed</span>
-<span class="preprocessor"># 设置成特定的`url`，适用于通过第三方服务定制feed的情况。</span>
-rss:
-
-<span class="preprocessor"># 图标字体</span>
-<span class="preprocessor"># NexT内建四种图标: default | linecons | fifty-shades | feather</span>
-icon_font: <span class="keyword">default</span>
-<span class="preprocessor">#icon_font: fifty-shades</span>
-<span class="preprocessor">#icon_font: feather</span>
-<span class="preprocessor">#icon_font: linecons</span>
-
-<span class="preprocessor"># 代码高亮主题</span>
-<span class="preprocessor"># Available value: normal | night | night eighties | night blue | night bright</span>
-<span class="preprocessor"># https://github.com/chriskempson/tomorrow-theme</span>
-highlight_theme: normal
-
-
-<span class="preprocessor"># MathJax support</span>
-<span class="preprocessor"># 开启数学公式渲染支持，默认关闭。设置为 `true` 开启。</span>
-mathjax: <span class="literal">true</span>
-
-
-<span class="preprocessor"># Mist</span>
-<span class="preprocessor"># 使用 Mist 主题</span>
-scheme: Mist
-
-
-<span class="preprocessor"># Sidebar 侧栏行为，可选值有:</span>
-<span class="preprocessor">#  - post   默认值，在文章页面自动展开侧栏</span>
-<span class="preprocessor">#  - always 在所有页面自动展开侧栏</span>
-<span class="preprocessor">#  - hide   在手动点击侧栏的开关按钮时展开</span>
-sidebar: post
-<span class="preprocessor">#sidebar: always</span>
-<span class="preprocessor">#sidebar: hide</span>
-
-
-<span class="preprocessor"># `阅读全文` 按钮跳转之后是否自动滚动页面到设置 `&lt;!-- more --&gt;` 的地方。</span>
-scroll_to_more: <span class="literal">true</span>
-
-
-<span class="preprocessor"># 是否为侧边栏文章的目录自动添加索引，默认开启。设置为 `false` 关闭。</span>
-toc_list_number: <span class="literal">true</span>
-
-<span class="preprocessor"># Automatically Excerpt</span>
-auto_excerpt:
-  enable: <span class="literal">false</span>
-  length: <span class="number">150</span>
-
-<span class="preprocessor"># Use Lato font</span>
-<span class="preprocessor"># Note: this option is avialable only when the language is not `zh-Hans`</span>
-use_font_lato: <span class="literal">true</span>
-
-<span class="preprocessor"># Make duoshuo show UA</span>
-<span class="preprocessor"># user_id must NOT be null when admin_enable is true!</span>
-<span class="preprocessor"># you can visit http://dev.duoshuo.com get duoshuo user id.</span>
-duoshuo_info:
-  ua_enable: <span class="literal">true</span>
-  admin_enable: <span class="literal">false</span>
-  user_id: <span class="number">0</span>
-  #admin_nickname: ROOT
-
-<span class="preprocessor">## DO NOT EDIT THE FOLLOWING SETTINGS</span>
-<span class="preprocessor">## UNLESS YOU KNOW WHAT YOU ARE DOING</span>
-
-<span class="preprocessor"># Use velocity to animate everything.</span>
-use_motion: <span class="literal">true</span>
-
-<span class="preprocessor"># Fancybox</span>
-fancybox: <span class="literal">true</span>
-
-<span class="preprocessor"># Static files</span>
-vendors: vendors
-css: css
-js: js
-images: images
-
-<span class="preprocessor"># Theme version</span>
-version: <span class="number">0.4</span><span class="number">.5</span><span class="number">.1</span>
-</code></pre><h1 id="小书匠新建文章模板">小书匠新建文章模板</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">---</span></span><br><span class="line"><span class="rule"><span class="attribute">title</span>:<span class="value">  新建文件</span><br><span class="line">date: &lt;% <span class="function">print</span>((new <span class="function">Date</span>()).<span class="function">getFullYear</span>().<span class="function">toString</span>()+ <span class="string">'-'</span>+ ((new <span class="function">Date</span>()).<span class="function">getMonth</span>() + <span class="number">1</span>).<span class="function">toString</span>() + <span class="string">'-'</span>+ (new <span class="function">Date</span>()).<span class="function">getDate</span>().<span class="function">toString</span>())</span></span>; %&gt;</span><br><span class="line"><span class="rule"><span class="attribute">categories</span>:<span class="value"> [学习, Hexo]</span><br><span class="line">tags: [学习, Hexo]</span><br><span class="line">grammar_cjkRuby: true</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">![][<span class="number">5</span>]</span><br><span class="line"></span><br><span class="line">这里是文章的封面、引言（摘要）。</span><br><span class="line"></span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line"></span><br><span class="line">----------</span></span></span><br></pre></td></tr></table></figure>
+<h1 id="配置文件">配置文件</h1><h2 id="站点配置文件：">站点配置文件：</h2><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># Site</span></span><br><span class="line">title: 十八仙僧の理想国</span><br><span class="line">subtitle: 思考 整理 分享</span><br><span class="line">description: 基因决定人, 环境决定成长, 平台决定层次, 机遇决定成就.</span><br><span class="line">author: 十八仙僧</span><br><span class="line">email: zhaishiba@gmail.com</span><br><span class="line">language: zh-Hans</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># URL</span></span><br><span class="line"><span class="preprocessor">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></span><br><span class="line">url: http:<span class="comment">//yoursite.com</span></span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Directory</span></span><br><span class="line">source_dir: source</span><br><span class="line">public_dir: <span class="keyword">public</span></span><br><span class="line">tag_dir: tags</span><br><span class="line">archive_dir: archives</span><br><span class="line">category_dir: categories</span><br><span class="line">code_dir: downloads/code</span><br><span class="line">i18n_dir: :lang</span><br><span class="line">skip_render:</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Writing</span></span><br><span class="line">new_post_name: :title.md # File name of <span class="keyword">new</span> posts</span><br><span class="line">default_layout: post</span><br><span class="line">titlecase: <span class="literal">false</span> # Transform title into titlecase</span><br><span class="line">external_link: <span class="literal">true</span> # Open external links in <span class="keyword">new</span> tab</span><br><span class="line">filename_case: <span class="number">0</span></span><br><span class="line">render_drafts: <span class="literal">false</span></span><br><span class="line">post_asset_folder: <span class="literal">false</span></span><br><span class="line">relative_link: <span class="literal">false</span></span><br><span class="line">future: <span class="literal">true</span></span><br><span class="line">highlight:</span><br><span class="line">  enable: <span class="literal">true</span></span><br><span class="line">  line_number: <span class="literal">true</span></span><br><span class="line">  auto_detect: <span class="literal">true</span></span><br><span class="line">  tab_replace:</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Category &amp; Tag</span></span><br><span class="line">default_category: uncategorized</span><br><span class="line">category_map:</span><br><span class="line">tag_map:</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Date / Time format</span></span><br><span class="line"><span class="preprocessor">## Hexo uses Moment.js to parse and display date</span></span><br><span class="line"><span class="preprocessor">## You can customize the date format as defined in</span></span><br><span class="line"><span class="preprocessor">## http://momentjs.com/docs/#/displaying/format/</span></span><br><span class="line">date_format: YYYY-MM-DD</span><br><span class="line">time_format: HH:mm:ss</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Pagination</span></span><br><span class="line"><span class="preprocessor">## Set per_page to 0 to disable pagination</span></span><br><span class="line">per_page: <span class="number">100</span></span><br><span class="line">pagination_dir: page</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Extensions</span></span><br><span class="line"><span class="preprocessor">## Plugins: http://hexo.io/plugins/</span></span><br><span class="line"><span class="preprocessor">## Themes: http://hexo.io/themes/</span></span><br><span class="line">theme: Next</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># ===================================================================================</span></span><br><span class="line"><span class="preprocessor">#主题配置段开始</span></span><br><span class="line"><span class="preprocessor">#====================================================================================</span></span><br><span class="line"></span><br><span class="line">avatar: http:<span class="comment">//ww4.sinaimg.cn/large/84262938gw1ewzxb252mwj20go0gomxh.jpg</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 多说评论系统</span></span><br><span class="line"><span class="preprocessor">#duoshuo_shortname: erofish</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 多说热评文章 true 或者 false</span></span><br><span class="line"><span class="preprocessor">#duoshuo_hotartical: true</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># DISQUS 帐号 （如果已经设置 多说 帐号，此选项将被跳过）</span></span><br><span class="line">disqus_shortname: erofish</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 百度分析ID</span></span><br><span class="line">baidu_analytics: <span class="number">3e0</span>f7bc4a598dfd178c5e45a195ba929</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 百度分享服务</span></span><br><span class="line">baidushare: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Swiftype Search Key</span></span><br><span class="line">swiftype_key: uBCMvYTzRxi2_CRLzt2g</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 站点起始时间</span></span><br><span class="line">since: <span class="number">2015</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 社交链接，将在侧栏中显示</span></span><br><span class="line">social:</span><br><span class="line">  GitHub: https:<span class="comment">//github.com/erofish</span></span><br><span class="line">  Weibo: http:<span class="comment">//weibo.com/erofish</span></span><br><span class="line">  ZhiHu: http:<span class="comment">//www.zhihu.com/people/erofish</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># ===================================================================================</span></span><br><span class="line"><span class="preprocessor">#主题配置段结束</span></span><br><span class="line"><span class="preprocessor"># ===================================================================================</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Deployment</span></span><br><span class="line"><span class="preprocessor">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:EroFish/erofish.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<h2 id="主题配置文件">主题配置文件</h2><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># when running hexo in a subdirectory (e.g. domain.tld/blog), remove leading slashes ( "/archives" -&gt; "archives" )</span></span><br><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  categories: /categories</span><br><span class="line">  #about: /about</span><br><span class="line">  archives: /archives</span><br><span class="line">  tags: /tags</span><br><span class="line">  #commonweal: /<span class="number">404.</span>html</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Place your favicon.ico to /source directory.</span></span><br><span class="line">favicon: /favicon.ico</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Set default keywords (Use a comma to separate)</span></span><br><span class="line">keywords: <span class="string">"Hexo,next"</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Set rss to false to disable feed link.</span></span><br><span class="line"><span class="preprocessor"># Leave rss as empty to use site's feed link.</span></span><br><span class="line"><span class="preprocessor"># Set rss to specific value if you have burned your feed already.</span></span><br><span class="line">rss:</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Icon fonts</span></span><br><span class="line"><span class="preprocessor"># Place your font into next/source/fonts, specify directory-name and font-name here</span></span><br><span class="line"><span class="preprocessor"># Avialable: default | linecons | fifty-shades | feather</span></span><br><span class="line">icon_font: <span class="keyword">default</span></span><br><span class="line"><span class="preprocessor">#icon_font: fifty-shades</span></span><br><span class="line"><span class="preprocessor">#icon_font: feather</span></span><br><span class="line"><span class="preprocessor">#icon_font: linecons</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Code Highlight theme</span></span><br><span class="line"><span class="preprocessor"># Available value: normal | night | night eighties | night blue | night bright</span></span><br><span class="line"><span class="preprocessor"># https://github.com/chriskempson/tomorrow-theme</span></span><br><span class="line">highlight_theme: normal</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># MathJax Support</span></span><br><span class="line">mathjax: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Schemes</span></span><br><span class="line">scheme: Mist</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Sidebar, available value:</span></span><br><span class="line"><span class="preprocessor">#  - post    expand on posts automatically. Default.</span></span><br><span class="line"><span class="preprocessor">#  - always  expand for all pages automatically</span></span><br><span class="line"><span class="preprocessor">#  - hide    expand only when click on the sidebar toggle icon.</span></span><br><span class="line"><span class="preprocessor">#sidebar: post</span></span><br><span class="line"><span class="preprocessor">#sidebar: always</span></span><br><span class="line">sidebar: hide</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Automatically scroll page to section which is under &lt;!-- more --&gt; mark.</span></span><br><span class="line">scroll_to_more: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Automatically add list number to toc.</span></span><br><span class="line">toc_list_number: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Automatically Excerpt</span></span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: <span class="literal">false</span></span><br><span class="line">  length: <span class="number">150</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Use Lato font</span></span><br><span class="line"><span class="preprocessor"># Note: this option is avialable only when the language is not `zh-Hans`</span></span><br><span class="line">use_font_lato: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Make duoshuo show UA</span></span><br><span class="line"><span class="preprocessor"># user_id must NOT be null when admin_enable is true!</span></span><br><span class="line"><span class="preprocessor"># you can visit http://dev.duoshuo.com get duoshuo user id.</span></span><br><span class="line">duoshuo_info:</span><br><span class="line">  ua_enable: <span class="literal">true</span></span><br><span class="line">  admin_enable: <span class="literal">false</span></span><br><span class="line">  user_id: <span class="number">0</span></span><br><span class="line">  #admin_nickname: ROOT</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">## DO NOT EDIT THE FOLLOWING SETTINGS</span></span><br><span class="line"><span class="preprocessor">## UNLESS YOU KNOW WHAT YOU ARE DOING</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Use velocity to animate everything.</span></span><br><span class="line">use_motion: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Fancybox</span></span><br><span class="line">fancybox: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Static files</span></span><br><span class="line">vendors: vendors</span><br><span class="line">css: css</span><br><span class="line">js: js</span><br><span class="line">images: images</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Theme version</span></span><br><span class="line">version: <span class="number">0.4</span><span class="number">.5</span><span class="number">.1</span></span><br></pre></td></tr></table></figure>
+<h1 id="小书匠新建文章模板">小书匠新建文章模板</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">---</span></span><br><span class="line"><span class="rule"><span class="attribute">title</span>:<span class="value">  新建文件</span><br><span class="line">date: &lt;% <span class="function">print</span>((new <span class="function">Date</span>()).<span class="function">getFullYear</span>().<span class="function">toString</span>()+ <span class="string">'-'</span>+ ((new <span class="function">Date</span>()).<span class="function">getMonth</span>() + <span class="number">1</span>).<span class="function">toString</span>() + <span class="string">'-'</span>+ (new <span class="function">Date</span>()).<span class="function">getDate</span>().<span class="function">toString</span>())</span></span>; %&gt;</span><br><span class="line"><span class="rule"><span class="attribute">tags</span>:<span class="value"> [生活, 学习]</span><br><span class="line">categories: 默认</span><br><span class="line">toc: true </span><br><span class="line">---</span></span></span><br></pre></td></tr></table></figure>
 <h1 id="图床">图床</h1><p>使用的<a href="https://chrome.google.com/webstore/detail/%E6%96%B0%E6%B5%AA%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A/fdfdnfpdplfbbnemmmoklbfjbhecpnhf" target="_blank" rel="external">新浪微博图床</a>。</p>
+<h1 id="记录工具与习惯">记录工具与习惯</h1><p>工具使用<a href="http://soft.xiaoshujiang.com/" target="_blank" rel="external">小书匠</a>。</p>
+<p><strong>写作步骤</strong>：用小书匠新建后写上标题，然后点击<code>另存为</code>，将其保存到<code>_post</code>目录下。<strong><em>所有的修改和再编辑一定要先打开<code>_poft</code>文件夹，再打开md文件在小书匠中编辑</em></strong>。否则的话很容易导致保存失败等种种的问题。</p>
 </span>
       
     </div>
@@ -525,7 +302,7 @@ version: <span class="number">0.4</span><span class="number">.5</span><span clas
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/10/12/hexo 中添加音乐 视频等多媒体文件/" rel="next">hexo 中添加音乐 视频等多媒体文件</a>
+              <a href="/2015/10/14/Hexo中利用MathJax书写公式/" rel="next">Hexo 中利用 Mathjax 书写公式</a>
             
           </div>
         </div>
@@ -591,7 +368,7 @@ version: <span class="number">0.4</span><span class="number">.5</span><span clas
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -605,7 +382,7 @@ version: <span class="number">0.4</span><span class="number">.5</span><span clas
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -647,7 +424,7 @@ version: <span class="number">0.4</span><span class="number">.5</span><span clas
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo_代码"><span class="nav-number">1.</span> <span class="nav-text">Hexo 代码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo_deploy_身份验证"><span class="nav-number">1.1.</span> <span class="nav-text">Hexo deploy 身份验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设定目录为Hexo"><span class="nav-number">1.2.</span> <span class="nav-text">设定目录为Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#清理"><span class="nav-number">1.3.</span> <span class="nav-text">清理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建"><span class="nav-number">1.4.</span> <span class="nav-text">搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地预览（debug）"><span class="nav-number">1.5.</span> <span class="nav-text">本地预览（debug）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上传Github"><span class="nav-number">1.6.</span> <span class="nav-text">上传Github</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo主题"><span class="nav-number">2.</span> <span class="nav-text">Hexo主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置文件"><span class="nav-number">3.</span> <span class="nav-text">配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#站点配置文件："><span class="nav-number">3.1.</span> <span class="nav-text">站点配置文件：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题配置文件"><span class="nav-number">3.2.</span> <span class="nav-text">主题配置文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小书匠新建文章模板"><span class="nav-number">4.</span> <span class="nav-text">小书匠新建文章模板</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图床"><span class="nav-number">5.</span> <span class="nav-text">图床</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo_代码"><span class="nav-number">1.</span> <span class="nav-text">Hexo 代码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo_deploy_身份验证"><span class="nav-number">1.1.</span> <span class="nav-text">Hexo deploy 身份验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设定目录为Hexo"><span class="nav-number">1.2.</span> <span class="nav-text">设定目录为Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#清理"><span class="nav-number">1.3.</span> <span class="nav-text">清理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建"><span class="nav-number">1.4.</span> <span class="nav-text">搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地预览（debug）"><span class="nav-number">1.5.</span> <span class="nav-text">本地预览（debug）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上传Github"><span class="nav-number">1.6.</span> <span class="nav-text">上传Github</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo主题"><span class="nav-number">2.</span> <span class="nav-text">Hexo主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置文件"><span class="nav-number">3.</span> <span class="nav-text">配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#站点配置文件："><span class="nav-number">3.1.</span> <span class="nav-text">站点配置文件：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题配置文件"><span class="nav-number">3.2.</span> <span class="nav-text">主题配置文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小书匠新建文章模板"><span class="nav-number">4.</span> <span class="nav-text">小书匠新建文章模板</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图床"><span class="nav-number">5.</span> <span class="nav-text">图床</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#记录工具与习惯"><span class="nav-number">6.</span> <span class="nav-text">记录工具与习惯</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
