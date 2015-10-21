@@ -46,7 +46,8 @@
 <meta property="og:site_name" content="十八仙僧の理想国">
 <meta property="og:description" content="科技文章的写作过程中会碰到许许多多的公式需要书写。这个问题困扰了我很久。在本地有MathType等一系列软件可以使用，Latex也有良好的本地支持，但是当我想在网上建立起自己的个人知识管理系统时却遇到了比较多的问题。这里做的是用Hexo + MathJax 录入数学公式的尝试。具体的讲解与方法参见sunxb10的这篇博文。">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/84262938gw1ex0udhvabyj21820eowjb.jpg">
-<meta property="og:updated_time" content="2015-10-15T10:05:02.977Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/84262938jw1ex9kkki5o9g20im0cotbm.gif">
+<meta property="og:updated_time" content="2015-10-21T23:52:12.311Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 中利用 Mathjax 书写公式">
 <meta name="twitter:description" content="科技文章的写作过程中会碰到许许多多的公式需要书写。这个问题困扰了我很久。在本地有MathType等一系列软件可以使用，Latex也有良好的本地支持，但是当我想在网上建立起自己的个人知识管理系统时却遇到了比较多的问题。这里做的是用Hexo + MathJax 录入数学公式的尝试。具体的讲解与方法参见sunxb10的这篇博文。">
@@ -257,7 +258,13 @@
 <p>科技文章的写作过程中会碰到许许多多的公式需要书写。这个问题困扰了我很久。在本地有MathType等一系列软件可以使用，Latex也有良好的本地支持，但是当我想在网上建立起自己的个人知识管理系统时却遇到了比较多的问题。这里做的是用Hexo + MathJax 录入数学公式的尝试。具体的讲解与方法参见sunxb10的<a href="http://sunxb10.github.io/2015/01/02/display-math-equations-with-hexo/" target="_blank" rel="external">这篇博文</a>。</p>
 <a id="more"></a>
 <hr>
-<p>$E = m c^{2}$</p>
+<h2 id="Next主题修改">Next主题修改</h2><p>每个主题对mathjax的修改方式不尽相同。我也是在多次尝试以后找到了针对Next主题的修改方式。(Next主题默认的mathjax不支持公式编号,所以我才对其进一步进行修改)。</p>
+<h3 id="用listary查找mathjax的文件">用listary查找mathjax的文件</h3><p>首先是在主题目录找到mathjax的文件。这里推荐用<a href="http://www.listary.com/" target="_blank" rel="external">listary</a>这款软件，在主题目录文件夹中按listary搜索快捷键(默认是<code>windows+~</code>好像,安装listary时一般会提醒设置)。</p>
+<p><img src="http://ww1.sinaimg.cn/large/84262938jw1ex9kkki5o9g20im0cotbm.gif" alt="利用listary查找mathjax文件"></p>
+<p>在Next主题中,我们发现mathjax的相关配置在mathjax.swig文件中，将其打开。</p>
+<h3 id="修改文件的代码">修改文件的代码</h3><p>将上述<a href="http://sunxb10.github.io/2015/01/02/display-math-equations-with-hexo/" target="_blank" rel="external">引用的博客</a>中的代码替换到自己主题的mathjax文件的适当位置。我这里是将那一串代码粘贴替换掉了<code>mathjax.swig</code>中原来的<script></script>标签中的内容，修改完成后保存即可。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if theme.mathjax %&#125;&#10;&#60;!-- MathJax Start --&#62;&#10;&#60;!-- MathJax documentation: http://docs.mathjax.org/en/latest/index.html --&#62;&#10;&#60;script type=&#34;text/x-mathjax-config&#34;&#62;&#10;  MathJax.Hub.Config(&#123;&#10;    tex2jax: &#123;  // tex2jax preprocessor&#10;      inlineMath: [ [&#39;$&#39;,&#39;$&#39;] ],  // delimiters for in-line math&#10;      displayMath: [ [&#39;$$&#39;,&#39;$$&#39;] ],  // delimiters for displayed equations&#10;      processEscapes: true,  // enable \$ to represent a single dollar sign&#10;      skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;, &#39;code&#39;]  // MathJax will not process contents inside these tags &#10;    &#125;,&#10;    TeX: &#123;  // TeX/LaTeX input processor&#10;      equationNumbers: &#123; autoNumber: &#34;AMS&#34; &#125;,  // only number those equations in specific AMSmath environments&#10;      extensions: [&#34;AMSmath.js&#34;,&#34;AMSsymbols.js&#34;,&#34;noErrors.js&#34;,&#34;noUndefined.js&#34;]  // introduce AMS extensions and suppress generating error messages &#10;    &#125;,&#10;    &#34;HTML-CSS&#34;: &#123;  // HTML-CSS output processor (this is the default output of MathJax)&#10;      scale: 110,  // The scaling factor of math with respect to the surrounding text&#10;      linebreaks: &#123; automatic: true &#125; // automatically breaks the line if necessary&#10;    &#125;,&#10;    SVG: &#123;  // SVG output processor&#10;      scale: 110,  // The scaling factor of math with respect to the surrounding text&#10;      linebreaks: &#123; automatic: true &#125; // automatically breaks the line if necessary&#10;    &#125;,&#10;    menuSettings: &#123;  // settings for the mathematics contextual menu&#10;      zoom: &#34;Hover&#34;  // set equation zooming to be triggered by a single mouse click&#10;    &#125;&#10;  &#125;);&#10; &#10;  MathJax.Hub.Queue(function() &#123; // Fix &#60;code&#62; tags after MathJax finishes running, this is a hack to overcome a shortcoming of Markdown&#10;      var all = MathJax.Hub.getAllJax(), i;&#10;      for(i=0; i &#60; all.length; i += 1) &#123;&#10;          all[i].SourceElement().parentNode.className += &#39; has-jax&#39;;&#10;      &#125;&#10;  &#125;);&#10;&#60;/script&#62;&#10;&#60;script type=&#34;text/javascript&#34;&#10;   src=&#34;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&#62;  // link to the MathJax CDN&#10;&#60;/script&#62;&#10;&#60;!-- MathJax End --&#62;&#10;&#10;&#60;script type=&#34;text/javascript&#34; src=&#34;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&#62;&#60;/script&#62;&#10;&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="效果测试">效果测试</h2><p>$E = m c^{2}$</p>
 <p>$a^{2} + b^{2} = c^{2}$</p>
 <p>$$f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}}$$</p>
 <p>$$v=\frac{\Delta s}{\Delta t}$$</p>
@@ -416,7 +423,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Next主题修改"><span class="nav-number">1.</span> <span class="nav-text">Next主题修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用listary查找mathjax的文件"><span class="nav-number">1.1.</span> <span class="nav-text">用listary查找mathjax的文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改文件的代码"><span class="nav-number">1.2.</span> <span class="nav-text">修改文件的代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#效果测试"><span class="nav-number">2.</span> <span class="nav-text">效果测试</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
