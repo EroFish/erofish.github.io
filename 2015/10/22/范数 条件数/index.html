@@ -46,7 +46,7 @@
 <meta property="og:site_name" content="十八仙僧の理想国">
 <meta property="og:description" content="参考文献向量範數| 線代啟示錄矩陣範數| 線代啟示錄條件數| 線代啟示錄歐幾里得空間的數學結構| 線代啟示錄向量的p范数 证明 百度知道">
 <meta property="og:image" content="https://ccjou.files.wordpress.com/2013/08/p-norm.gif?w=448&h=336">
-<meta property="og:updated_time" content="2015-10-22T00:16:33.563Z">
+<meta property="og:updated_time" content="2015-10-22T00:27:39.465Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="范数 & 条件数">
 <meta name="twitter:description" content="参考文献向量範數| 線代啟示錄矩陣範數| 線代啟示錄條件數| 線代啟示錄歐幾里得空間的數學結構| 線代啟示錄向量的p范数 证明 百度知道">
@@ -261,16 +261,16 @@
 <h3 id="定义">定义</h3><h4 id="正定性（非负性）">正定性（非负性）</h4><p>$$|x|\geqslant0 （当且仅当x=0时|x|=0）$$</p>
 <h4 id="齐次性（均匀性）">齐次性（均匀性）</h4><p>$$|\alpha x|=|\alpha| |x|$$</p>
 <h4 id="次可加性（三角不等式）">次可加性（三角不等式）</h4><p>$$|x+y|\leqslant|x|+|y|$$</p>
-<h3 id="向量的范数">向量的范数</h3><h4 id="p-范数">p-范数</h4><p>$$|x|<em>p=(\sum</em>{i=1}^{n}|x_i|^p)^{1/p}$$</p>
-<h4 id="1-范数">1-范数</h4><p>$$|x|<em>1=\sum</em>{i=1}^{n}|x_i|$$</p>
-<h4 id="2-范数(欧式范数)">2-范数(欧式范数)</h4><p>$$|x|<em>2=(\sum</em>{i=1}^{n}|x_i|^2)^{1/2}$$</p>
-<h4 id="∞-范数(最大范数)">∞-范数(最大范数)</h4><p>$$|x|<em>\infty=\lim</em>{p\rightarrow\infty}(\sum_{i=1}^{n}|x<em>i|^p)^{1/p}=\max</em>{1\leqslant i \leqslant n}|x_i|$$</p>
+<h3 id="向量的范数">向量的范数</h3><h4 id="p-范数">p-范数</h4><p>$$|x|_p=(\sum_{i=1}^{n}|x_i|^p)^{1/p}$$</p>
+<h4 id="1-范数">1-范数</h4><p>$$|x|_1=\sum_{i=1}^{n}|x_i|$$</p>
+<h4 id="2-范数(欧式范数)">2-范数(欧式范数)</h4><p>$$|x|_2=(\sum_{i=1}^{n}|x_i|^2)^{1/2}$$</p>
+<h4 id="∞-范数(最大范数)">∞-范数(最大范数)</h4><p>$$|x|_\infty=\lim_{p\rightarrow\infty}(\sum_{i=1}^{n}|x_i|^p)^{1/p}=\max_{1\leqslant i \leqslant n}|x_i|$$</p>
 <blockquote>
-<p><code>证明</code>:<br>记$t=\max_{1\leqslant i \leqslant n}|x<em>i|$，则有:<br>\begin{align}<br>    \eqalign{<br>     |x|</em>\infty&amp; =\lim_{p\rightarrow\infty}(|x_1|^p+|x_2|^p+\ldots+|x<em>n|^p)^{1/p}\<br>                 &amp; =t\lim</em>{p\rightarrow\infty}(|\frac{x_1}{t}|^p+|\frac{x_2}{t}|^p+\ldots+|x<em>n|^p)^{1/p}\<br>                 &amp; =t<br>    }<br>\end{align}<br>上式中，运用到了夹逼准则：<br>$$\lim</em>{p\rightarrow\infty}1^{1/p}\leqslant\lim_{p\rightarrow\infty}(|\frac{x_1}{t}|^p+|\frac{x_2}{t}|^p+\ldots+|x<em>n|^p)^{1/p}\leqslant\lim</em>{p\rightarrow\infty}n^{1/p}$$<br>而<br>$$\lim<em>{p\rightarrow\infty}1^{1/p}=\lim</em>{p\rightarrow\infty}n^{1/p}=1$$</p>
+<p><code>证明</code>:<br>记$t=\max_{1\leqslant i \leqslant n}|x_i|$，则有:<br>\begin{align}<br>    \eqalign{<br>     |x|_\infty&amp; =\lim_{p\rightarrow\infty}(|x_1|^p+|x_2|^p+\ldots+|x_n|^p)^{1/p}\\<br>                 &amp; =t\lim_{p\rightarrow\infty}(|\frac{x_1}{t}|^p+|\frac{x_2}{t}|^p+\ldots+|x_n|^p)^{1/p}\\<br>                 &amp; =t<br>    }<br>\end{align}<br>上式中，运用到了夹逼准则：<br>$$\lim_{p\rightarrow\infty}1^{1/p}\leqslant\lim_{p\rightarrow\infty}(|\frac{x_1}{t}|^p+|\frac{x_2}{t}|^p+\ldots+|x_n|^p)^{1/p}\leqslant\lim_{p\rightarrow\infty}n^{1/p}$$<br>而<br>$$\lim_{p\rightarrow\infty}1^{1/p}=\lim_{p\rightarrow\infty}n^{1/p}=1$$</p>
 </blockquote>
 <h3 id="性质与应用">性质与应用</h3><h4 id="向量范数的等价性">向量范数的等价性</h4><p>$$c_1\leqslant\frac{|x|_s}{|x|_t}\leqslant c_2  (c_1,c_2&gt;0)$$</p>
 <blockquote>
-<p><code>证明</code><br>只要就$|x|<em>s=|x|</em>\infty$证明上式成立即可，即证明存在常数$c_1,c_2&gt;0$，使<br>$$c_1\leqslant\frac{|x|<em>s}{|x|</em>\infty}\leqslant c_2  (对一切x\in R^n且x\neq0)$$<br>考虑函数<br>$$$$</p>
+<p><code>证明</code><br>只要就$|x|_s=|x|_\infty$证明上式成立即可，即证明存在常数$c_1,c_2&gt;0$，使<br>$$c_1\leqslant\frac{|x|_s}{|x|_\infty}\leqslant c_2  (对一切x\in R^n且x\neq0)$$<br>考虑函数<br>$$$$</p>
 </blockquote>
 <h4 id="向量的极限">向量的极限</h4><p>$$\lim_{k\rightarrow\infty}x_i^{(k)}=x_i^{*}$$</p>
 <h4 id="向量范数的连续性">向量范数的连续性</h4><blockquote>
