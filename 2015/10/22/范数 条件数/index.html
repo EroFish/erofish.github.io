@@ -30,7 +30,7 @@
 
 
 
-  <meta name="keywords" content="学习," />
+  <meta name="keywords" content="条件数,范数," />
 
 
 
@@ -39,18 +39,17 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="科技文章的写作过程中会碰到许许多多的公式需要书写。这个问题困扰了我很久。在本地有MathType等一系列软件可以使用，Latex也有良好的本地支持，但是当我想在网上建立起自己的个人知识管理系统时却遇到了比较多的问题。这里做的是用Hexo + MathJax 录入数学公式的尝试。具体的讲解与方法参见sunxb10的这篇博文。">
+<meta name="description" content="参考文献向量範數| 線代啟示錄矩陣範數| 線代啟示錄條件數| 線代啟示錄歐幾里得空間的數學結構| 線代啟示錄向量的p范数 证明 百度知道">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo 中利用 Mathjax 书写公式">
-<meta property="og:url" content="http://yoursite.com/2015/10/14/Hexo中利用MathJax书写公式/index.html">
+<meta property="og:title" content="范数 & 条件数">
+<meta property="og:url" content="http://yoursite.com/2015/10/22/范数 条件数/index.html">
 <meta property="og:site_name" content="十八仙僧の理想国">
-<meta property="og:description" content="科技文章的写作过程中会碰到许许多多的公式需要书写。这个问题困扰了我很久。在本地有MathType等一系列软件可以使用，Latex也有良好的本地支持，但是当我想在网上建立起自己的个人知识管理系统时却遇到了比较多的问题。这里做的是用Hexo + MathJax 录入数学公式的尝试。具体的讲解与方法参见sunxb10的这篇博文。">
-<meta property="og:image" content="http://ww2.sinaimg.cn/large/84262938gw1ex0udhvabyj21820eowjb.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/84262938jw1ex9kkki5o9g20im0cotbm.gif">
-<meta property="og:updated_time" content="2015-10-21T23:52:12.311Z">
+<meta property="og:description" content="参考文献向量範數| 線代啟示錄矩陣範數| 線代啟示錄條件數| 線代啟示錄歐幾里得空間的數學結構| 線代啟示錄向量的p范数 证明 百度知道">
+<meta property="og:image" content="https://ccjou.files.wordpress.com/2013/08/p-norm.gif?w=448&h=336">
+<meta property="og:updated_time" content="2015-10-22T00:16:33.563Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo 中利用 Mathjax 书写公式">
-<meta name="twitter:description" content="科技文章的写作过程中会碰到许许多多的公式需要书写。这个问题困扰了我很久。在本地有MathType等一系列软件可以使用，Latex也有良好的本地支持，但是当我想在网上建立起自己的个人知识管理系统时却遇到了比较多的问题。这里做的是用Hexo + MathJax 录入数学公式的尝试。具体的讲解与方法参见sunxb10的这篇博文。">
+<meta name="twitter:title" content="范数 & 条件数">
+<meta name="twitter:description" content="参考文献向量範數| 線代啟示錄矩陣範數| 線代啟示錄條件數| 線代啟示錄歐幾里得空間的數學結構| 線代啟示錄向量的p范数 证明 百度知道">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -62,7 +61,7 @@
 
 
 
-  <title> Hexo 中利用 Mathjax 书写公式 | 十八仙僧の理想国 </title>
+  <title> 范数 & 条件数 | 十八仙僧の理想国 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -203,7 +202,7 @@
           
           
             
-              Hexo 中利用 Mathjax 书写公式
+              范数 & 条件数
             
           
         </h1>
@@ -212,8 +211,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-10-14T00:00:00+08:00" content="2015-10-14">
-            2015-10-14
+          <time itemprop="dateCreated" datetime="2015-10-22T00:00:00+08:00" content="2015-10-22">
+            2015-10-22
           </time>
         </span>
 
@@ -222,8 +221,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/默认/" itemprop="url" rel="index">
-                  <span itemprop="name">默认</span>
+                <a href="/categories/学习/" itemprop="url" rel="index">
+                  <span itemprop="name">学习</span>
                 </a>
               </span>
 
@@ -238,8 +237,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/10/14/Hexo中利用MathJax书写公式/#comments" itemprop="discussionUrl">
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/10/14/Hexo中利用MathJax书写公式/" itemprop="commentsCount"></span>
+            <a href="/2015/10/22/范数 条件数/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/10/22/范数 条件数/" itemprop="commentsCount"></span>
             </a>
           </span>
           
@@ -254,30 +253,29 @@
       
 
       
-        <span itemprop="articleBody"><p><img src="http://ww2.sinaimg.cn/large/84262938gw1ex0udhvabyj21820eowjb.jpg" alt=""></p>
-<p>科技文章的写作过程中会碰到许许多多的公式需要书写。这个问题困扰了我很久。在本地有MathType等一系列软件可以使用，Latex也有良好的本地支持，但是当我想在网上建立起自己的个人知识管理系统时却遇到了比较多的问题。这里做的是用Hexo + MathJax 录入数学公式的尝试。具体的讲解与方法参见sunxb10的<a href="http://sunxb10.github.io/2015/01/02/display-math-equations-with-hexo/" target="_blank" rel="external">这篇博文</a>。</p>
+        <span itemprop="articleBody"><p><img src="https://ccjou.files.wordpress.com/2013/08/p-norm.gif?w=448&amp;h=336" alt=""></p>
+<h2 id="参考文献">参考文献</h2><p><a href="https://ccjou.wordpress.com/2013/08/13/%E5%90%91%E9%87%8F%E7%AF%84%E6%95%B8/" target="_blank" rel="external">向量範數| 線代啟示錄</a><br><a href="https://ccjou.wordpress.com/2010/05/10/%E7%9F%A9%E9%99%A3%E6%A8%A1/" target="_blank" rel="external">矩陣範數| 線代啟示錄</a><br><a href="https://ccjou.wordpress.com/2010/07/01/%E6%A2%9D%E4%BB%B6%E6%95%B8/" target="_blank" rel="external">條件數| 線代啟示錄</a><br><a href="https://ccjou.wordpress.com/2015/09/04/%E6%AD%90%E5%B9%BE%E9%87%8C%E5%BE%97%E7%A9%BA%E9%96%93%E7%9A%84%E6%95%B8%E5%AD%B8%E7%B5%90%E6%A7%8B/" target="_blank" rel="external">歐幾里得空間的數學結構| 線代啟示錄</a><br><a href="http://zhidao.baidu.com/question/204485716.html" target="_blank" rel="external">向量的p范数 证明 百度知道</a></p>
 <a id="more"></a>
 <hr>
-<h2 id="Next主题修改">Next主题修改</h2><p>每个主题对mathjax的修改方式不尽相同。我也是在多次尝试以后找到了针对Next主题的修改方式。(Next主题默认的mathjax不支持公式编号,所以我才对其进一步进行修改)。</p>
-<h3 id="用listary查找mathjax的文件">用listary查找mathjax的文件</h3><p>首先是在主题目录找到mathjax的文件。这里推荐用<a href="http://www.listary.com/" target="_blank" rel="external">listary</a>这款软件，在主题目录文件夹中按listary搜索快捷键(默认是<code>windows+~</code>好像,安装listary时一般会提醒设置)。</p>
-<p><img src="http://ww1.sinaimg.cn/large/84262938jw1ex9kkki5o9g20im0cotbm.gif" alt="利用listary查找mathjax文件"></p>
-<p>在Next主题中,我们发现mathjax的相关配置在mathjax.swig文件中，将其打开。</p>
-<h3 id="修改文件的代码">修改文件的代码</h3><p>将上述<a href="http://sunxb10.github.io/2015/01/02/display-math-equations-with-hexo/" target="_blank" rel="external">引用的博客</a>中的代码替换到自己主题的mathjax文件的适当位置。我这里是将那一串代码粘贴替换掉了<code>mathjax.swig</code>中原来的<script></script>标签中的内容，修改完成后保存即可。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if theme.mathjax %&#125;&#10;&#60;!-- MathJax Start --&#62;&#10;&#60;!-- MathJax documentation: http://docs.mathjax.org/en/latest/index.html --&#62;&#10;&#60;script type=&#34;text/x-mathjax-config&#34;&#62;&#10;  MathJax.Hub.Config(&#123;&#10;    tex2jax: &#123;  // tex2jax preprocessor&#10;      inlineMath: [ [&#39;$&#39;,&#39;$&#39;] ],  // delimiters for in-line math&#10;      displayMath: [ [&#39;$$&#39;,&#39;$$&#39;] ],  // delimiters for displayed equations&#10;      processEscapes: true,  // enable \$ to represent a single dollar sign&#10;      skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;, &#39;code&#39;]  // MathJax will not process contents inside these tags &#10;    &#125;,&#10;    TeX: &#123;  // TeX/LaTeX input processor&#10;      equationNumbers: &#123; autoNumber: &#34;AMS&#34; &#125;,  // only number those equations in specific AMSmath environments&#10;      extensions: [&#34;AMSmath.js&#34;,&#34;AMSsymbols.js&#34;,&#34;noErrors.js&#34;,&#34;noUndefined.js&#34;]  // introduce AMS extensions and suppress generating error messages &#10;    &#125;,&#10;    &#34;HTML-CSS&#34;: &#123;  // HTML-CSS output processor (this is the default output of MathJax)&#10;      scale: 110,  // The scaling factor of math with respect to the surrounding text&#10;      linebreaks: &#123; automatic: true &#125; // automatically breaks the line if necessary&#10;    &#125;,&#10;    SVG: &#123;  // SVG output processor&#10;      scale: 110,  // The scaling factor of math with respect to the surrounding text&#10;      linebreaks: &#123; automatic: true &#125; // automatically breaks the line if necessary&#10;    &#125;,&#10;    menuSettings: &#123;  // settings for the mathematics contextual menu&#10;      zoom: &#34;Hover&#34;  // set equation zooming to be triggered by a single mouse click&#10;    &#125;&#10;  &#125;);&#10; &#10;  MathJax.Hub.Queue(function() &#123; // Fix &#60;code&#62; tags after MathJax finishes running, this is a hack to overcome a shortcoming of Markdown&#10;      var all = MathJax.Hub.getAllJax(), i;&#10;      for(i=0; i &#60; all.length; i += 1) &#123;&#10;          all[i].SourceElement().parentNode.className += &#39; has-jax&#39;;&#10;      &#125;&#10;  &#125;);&#10;&#60;/script&#62;&#10;&#60;script type=&#34;text/javascript&#34;&#10;   src=&#34;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&#62;  // link to the MathJax CDN&#10;&#60;/script&#62;&#10;&#60;!-- MathJax End --&#62;&#10;&#10;&#60;script type=&#34;text/javascript&#34; src=&#34;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&#62;&#60;/script&#62;&#10;&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="效果测试">效果测试</h2><p>$E = m c^{2}$</p>
-<p>$a^{2} + b^{2} = c^{2}$</p>
-<p>$$f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}}$$</p>
-<p>$$v=\frac{\Delta s}{\Delta t}$$</p>
-<p>$$f<em>{n}=f</em>{n-1}+f_{n-2}$$</p>
-<p>$$f_{n}=f_{n-1}+f_{n-2}$$</p>
-<p>$$<br>\mathrm{e}^{i\theta}=\cos\theta+i\sin\theta\<br>\mathrm{e}^{i\pi}+1=0<br>$$</p>
-<p>$$<br>\mathrm{e}^{i\theta}=\cos\theta+i\sin\theta\\<br>\mathrm{e}^{i\pi}+1=0<br>$$</p>
-<p>\begin{equation}<br>f_{0} = 1\\<br>f_{1} = 1\\<br>f_{n} = f_{n-1} + f_{n-2}\quad (n&gt;1)<br>\end{equation}</p>
-<p>\begin{align}<br>\begin{vmatrix}<br>1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 \\<br>a_{1} &amp; a_{2} &amp; a_{3} &amp; \cdots &amp; a_{n} \\<br>a_{1}^{2} &amp; a_{2}^{2} &amp; a_{3}^{2} &amp; \cdots &amp; a_{n}^{2} \\<br>a_{1}^{3} &amp; a_{2}^{3} &amp; a_{3}^{3} &amp; \cdots &amp; a_{n}^{3} \\<br>\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\<br>a_{1}^{n−1} &amp; a_{2}^{n−1} &amp; a_{3}^{n−1} &amp; \cdots &amp; a_{n}^{n−1}<br>\end{vmatrix} = \prod_{1\leqslant{}j &lt; i\leqslant{}n}(a_{i}−a_{j})<br>\end{align}</p>
-<p>\begin{align}<br>&amp;e^{i\pi} + 1 = 0 \label{eq:Euler}\\<br>&amp;\hat{H}\Psi = i\hbar\frac{\partial}{\partial t}\Psi \label{eq:Schrödinger}\\<br>&amp;\sqrt{1 + 2\sqrt{1 + 3\sqrt{1 + 4\sqrt{1 + \cdots}}}} = 3 \label{eq:Ramanujan}<br>\end{align}</p>
-<p>\eqref{eq:Euler}式是欧拉公式<br>\eqref{eq:Schrödinger}式是薛定谔方程<br>\eqref{eq:Ramanujan}式是拉马努金恒等式</p>
-<p>\begin{align*}<br>&amp;\nabla \cdot \boldsymbol{E} = \frac{\rho}{\varepsilon_{0}} \\<br>&amp;\nabla \cdot \boldsymbol{B} = 0 \\<br>&amp;\nabla \times \boldsymbol{E} = -\frac{\partial\boldsymbol{B}}{\partial t} \\<br>&amp;\nabla \times \boldsymbol{B} = \mu_{0} \boldsymbol{J} + \mu_{0}\varepsilon_{0}\frac{\partial\boldsymbol{E}}{\partial t}<br>\end{align*}</p>
-<p>\begin{align}<br>E &amp;= mc^{2} \notag \\<br>E &amp;= h\nu \notag \\<br>m &amp;= h\nu/c^{2}<br>\end{align}</p>
+<h2 id="向量范数">向量范数</h2><h3 id="理解">理解</h3><p>三维空间中向量长度的推广</p>
+<h3 id="定义">定义</h3><h4 id="正定性（非负性）">正定性（非负性）</h4><p>$$|x|\geqslant0 （当且仅当x=0时|x|=0）$$</p>
+<h4 id="齐次性（均匀性）">齐次性（均匀性）</h4><p>$$|\alpha x|=|\alpha| |x|$$</p>
+<h4 id="次可加性（三角不等式）">次可加性（三角不等式）</h4><p>$$|x+y|\leqslant|x|+|y|$$</p>
+<h3 id="向量的范数">向量的范数</h3><h4 id="p-范数">p-范数</h4><p>$$|x|<em>p=(\sum</em>{i=1}^{n}|x_i|^p)^{1/p}$$</p>
+<h4 id="1-范数">1-范数</h4><p>$$|x|<em>1=\sum</em>{i=1}^{n}|x_i|$$</p>
+<h4 id="2-范数(欧式范数)">2-范数(欧式范数)</h4><p>$$|x|<em>2=(\sum</em>{i=1}^{n}|x_i|^2)^{1/2}$$</p>
+<h4 id="∞-范数(最大范数)">∞-范数(最大范数)</h4><p>$$|x|<em>\infty=\lim</em>{p\rightarrow\infty}(\sum_{i=1}^{n}|x<em>i|^p)^{1/p}=\max</em>{1\leqslant i \leqslant n}|x_i|$$</p>
+<blockquote>
+<p><code>证明</code>:<br>记$t=\max_{1\leqslant i \leqslant n}|x<em>i|$，则有:<br>\begin{align}<br>    \eqalign{<br>     |x|</em>\infty&amp; =\lim_{p\rightarrow\infty}(|x_1|^p+|x_2|^p+\ldots+|x<em>n|^p)^{1/p}\<br>                 &amp; =t\lim</em>{p\rightarrow\infty}(|\frac{x_1}{t}|^p+|\frac{x_2}{t}|^p+\ldots+|x<em>n|^p)^{1/p}\<br>                 &amp; =t<br>    }<br>\end{align}<br>上式中，运用到了夹逼准则：<br>$$\lim</em>{p\rightarrow\infty}1^{1/p}\leqslant\lim_{p\rightarrow\infty}(|\frac{x_1}{t}|^p+|\frac{x_2}{t}|^p+\ldots+|x<em>n|^p)^{1/p}\leqslant\lim</em>{p\rightarrow\infty}n^{1/p}$$<br>而<br>$$\lim<em>{p\rightarrow\infty}1^{1/p}=\lim</em>{p\rightarrow\infty}n^{1/p}=1$$</p>
+</blockquote>
+<h3 id="性质与应用">性质与应用</h3><h4 id="向量范数的等价性">向量范数的等价性</h4><p>$$c_1\leqslant\frac{|x|_s}{|x|_t}\leqslant c_2  (c_1,c_2&gt;0)$$</p>
+<blockquote>
+<p><code>证明</code><br>只要就$|x|<em>s=|x|</em>\infty$证明上式成立即可，即证明存在常数$c_1,c_2&gt;0$，使<br>$$c_1\leqslant\frac{|x|<em>s}{|x|</em>\infty}\leqslant c_2  (对一切x\in R^n且x\neq0)$$<br>考虑函数<br>$$$$</p>
+</blockquote>
+<h4 id="向量的极限">向量的极限</h4><p>$$\lim_{k\rightarrow\infty}x_i^{(k)}=x_i^{*}$$</p>
+<h4 id="向量范数的连续性">向量范数的连续性</h4><blockquote>
+<p><code>证明</code></p>
+</blockquote>
 </span>
       
     </div>
@@ -286,7 +284,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/学习/" rel="tag">#学习</a>
+            <a href="/tags/条件数/" rel="tag">#条件数</a>
+          
+            <a href="/tags/范数/" rel="tag">#范数</a>
           
         </div>
       
@@ -295,13 +295,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/10/14/Hexo搭建信息备忘/" rel="prev">Hexo 搭建备忘</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/10/12/hexo 中添加音乐 视频等多媒体文件/" rel="next">hexo 中添加音乐 视频等多媒体文件</a>
+              <a href="/2015/10/16/【读书笔记】线性代数——李尚志/" rel="next">【读书笔记】线性代数——李尚志</a>
             
           </div>
         </div>
@@ -423,7 +421,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Next主题修改"><span class="nav-number">1.</span> <span class="nav-text">Next主题修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用listary查找mathjax的文件"><span class="nav-number">1.1.</span> <span class="nav-text">用listary查找mathjax的文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改文件的代码"><span class="nav-number">1.2.</span> <span class="nav-text">修改文件的代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#效果测试"><span class="nav-number">2.</span> <span class="nav-text">效果测试</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">1.</span> <span class="nav-text">参考文献</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#向量范数"><span class="nav-number">2.</span> <span class="nav-text">向量范数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#理解"><span class="nav-number">2.1.</span> <span class="nav-text">理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">2.2.</span> <span class="nav-text">定义</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#正定性（非负性）"><span class="nav-number">2.2.1.</span> <span class="nav-text">正定性（非负性）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#齐次性（均匀性）"><span class="nav-number">2.2.2.</span> <span class="nav-text">齐次性（均匀性）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#次可加性（三角不等式）"><span class="nav-number">2.2.3.</span> <span class="nav-text">次可加性（三角不等式）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向量的范数"><span class="nav-number">2.3.</span> <span class="nav-text">向量的范数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#p-范数"><span class="nav-number">2.3.1.</span> <span class="nav-text">p-范数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-范数"><span class="nav-number">2.3.2.</span> <span class="nav-text">1-范数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-范数(欧式范数)"><span class="nav-number">2.3.3.</span> <span class="nav-text">2-范数(欧式范数)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#∞-范数(最大范数)"><span class="nav-number">2.3.4.</span> <span class="nav-text">∞-范数(最大范数)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质与应用"><span class="nav-number">2.4.</span> <span class="nav-text">性质与应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#向量范数的等价性"><span class="nav-number">2.4.1.</span> <span class="nav-text">向量范数的等价性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#向量的极限"><span class="nav-number">2.4.2.</span> <span class="nav-text">向量的极限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#向量范数的连续性"><span class="nav-number">2.4.3.</span> <span class="nav-text">向量范数的连续性</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -477,9 +475,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'erofish';
-      var disqus_identifier = '2015/10/14/Hexo中利用MathJax书写公式/';
-      var disqus_title = 'Hexo 中利用 Mathjax 书写公式';
-      var disqus_url = 'http://yoursite.com/2015/10/14/Hexo中利用MathJax书写公式/';
+      var disqus_identifier = '2015/10/22/范数 条件数/';
+      var disqus_title = '范数 & 条件数';
+      var disqus_url = 'http://yoursite.com/2015/10/22/范数 条件数/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
