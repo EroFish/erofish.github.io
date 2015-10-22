@@ -46,7 +46,7 @@
 <meta property="og:site_name" content="十八仙僧の理想国">
 <meta property="og:description" content="参考文献向量範數| 線代啟示錄矩陣範數| 線代啟示錄條件數| 線代啟示錄歐幾里得空間的數學結構| 線代啟示錄向量的p范数 证明 百度知道">
 <meta property="og:image" content="https://ccjou.files.wordpress.com/2013/08/p-norm.gif?w=448&h=336">
-<meta property="og:updated_time" content="2015-10-22T00:27:39.465Z">
+<meta property="og:updated_time" content="2015-10-22T00:30:49.731Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="范数 & 条件数">
 <meta name="twitter:description" content="参考文献向量範數| 線代啟示錄矩陣範數| 線代啟示錄條件數| 線代啟示錄歐幾里得空間的數學結構| 線代啟示錄向量的p范数 证明 百度知道">
@@ -266,7 +266,7 @@
 <h4 id="2-范数(欧式范数)">2-范数(欧式范数)</h4><p>$$|x|_2=(\sum_{i=1}^{n}|x_i|^2)^{1/2}$$</p>
 <h4 id="∞-范数(最大范数)">∞-范数(最大范数)</h4><p>$$|x|_\infty=\lim_{p\rightarrow\infty}(\sum_{i=1}^{n}|x_i|^p)^{1/p}=\max_{1\leqslant i \leqslant n}|x_i|$$</p>
 <blockquote>
-<p><code>证明</code>:<br>记$t=\max_{1\leqslant i \leqslant n}|x_i|$，则有:<br>\begin{align}<br>    \eqalign{<br>     |x|_\infty&amp; =\lim_{p\rightarrow\infty}(|x_1|^p+|x_2|^p+\ldots+|x_n|^p)^{1/p}\\<br>                 &amp; =t\lim_{p\rightarrow\infty}(|\frac{x_1}{t}|^p+|\frac{x_2}{t}|^p+\ldots+|x_n|^p)^{1/p}\\<br>                 &amp; =t<br>    }<br>\end{align}<br>上式中，运用到了夹逼准则：<br>$$\lim_{p\rightarrow\infty}1^{1/p}\leqslant\lim_{p\rightarrow\infty}(|\frac{x_1}{t}|^p+|\frac{x_2}{t}|^p+\ldots+|x_n|^p)^{1/p}\leqslant\lim_{p\rightarrow\infty}n^{1/p}$$<br>而<br>$$\lim_{p\rightarrow\infty}1^{1/p}=\lim_{p\rightarrow\infty}n^{1/p}=1$$</p>
+<p><code>证明</code>:<br>记$t=\max_{1\leqslant i \leqslant n}|x_i|$，则有:<br>\begin{align}<br>    \eqalign{<br>     |x|_\infty&amp; =\lim_{p\rightarrow\infty}(|x_1|^p+|x_2|^p+\ldots+|x_n|^p)^{1/p}\\<br>                 &amp; =t\lim_{p\rightarrow\infty}(|\frac{x_1}{t}|^p+|\frac{x_2}{t}|^p+\ldots+|\frac{x_n}{t}|^p)^{1/p}\\<br>                 &amp; =t<br>    }<br>\end{align}<br>上式中，运用到了夹逼准则：<br>$$\lim_{p\rightarrow\infty}1^{1/p}\leqslant\lim_{p\rightarrow\infty}(|\frac{x_1}{t}|^p+|\frac{x_2}{t}|^p+\ldots+|x_n|^p)^{1/p}\leqslant\lim_{p\rightarrow\infty}n^{1/p}$$<br>而<br>$$\lim_{p\rightarrow\infty}1^{1/p}=\lim_{p\rightarrow\infty}n^{1/p}=1$$</p>
 </blockquote>
 <h3 id="性质与应用">性质与应用</h3><h4 id="向量范数的等价性">向量范数的等价性</h4><p>$$c_1\leqslant\frac{|x|_s}{|x|_t}\leqslant c_2  (c_1,c_2&gt;0)$$</p>
 <blockquote>
