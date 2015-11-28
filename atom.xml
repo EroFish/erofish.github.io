@@ -4,7 +4,7 @@
   <subtitle><![CDATA[思考 整理 分享]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-11-28T07:45:34.715Z</updated>
+  <updated>2015-11-28T07:47:03.843Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2015/11/28/%E7%94%A8%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E4%B8%AD%E7%9A%84%E5%A4%96%E6%8E%A8%E6%B3%95%E6%9D%A5%E8%AE%A1%E7%AE%97%CF%80%E7%9A%84%E8%BF%91%E4%BC%BC%E5%80%BC/"/>
     <id>http://yoursite.com/2015/11/28/用计算方法中的外推法来计算π的近似值/</id>
     <published>2015-11-27T16:00:00.000Z</published>
-    <updated>2015-11-28T07:45:34.715Z</updated>
+    <updated>2015-11-28T07:47:03.843Z</updated>
     <content type="html"><![CDATA[<p><img src="http://img.my.csdn.net/uploads/201107/21/0_1311218496eXch.gif" alt=""><br>如上图所示，单位圆的内接正$n$边形的周长为$2nsin(\frac{\pi}{n})$，而单位圆的周长为$2\pi$，因此，我们有：<br>$$\pi=\lim_{n\to\infty}nsin(\frac{\pi}{n})$$</p>
 <a id="more"></a>
 <hr>
@@ -45,13 +45,12 @@
 <td>$k=1$</td>
 <td>$3.0000$</td>
 <td>$3.1411$</td>
-<td>$$</td>
+<td></td>
 </tr>
 <tr>
 <td>$k=2$</td>
 <td>$3.1058$</td>
-<td>$$</td>
-<td>$$</td>
+<td></td>
 </tr>
 </tbody>
 </table>
