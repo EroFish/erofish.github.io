@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[十八仙僧の理想国]]></title>
+  <subtitle><![CDATA[思考 整理 分享]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2015-11-28T01:44:22.681Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name><![CDATA[十八仙僧]]></name>
+    <email><![CDATA[zhaishiba@gmail.com]]></email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[用计算方法中的外推法来计算π的近似值]]></title>
+    <link href="http://yoursite.com/2015/11/28/%E7%94%A8%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E4%B8%AD%E7%9A%84%E5%A4%96%E6%8E%A8%E6%B3%95%E6%9D%A5%E8%AE%A1%E7%AE%97%CF%80%E7%9A%84%E8%BF%91%E4%BC%BC%E5%80%BC/"/>
+    <id>http://yoursite.com/2015/11/28/用计算方法中的外推法来计算π的近似值/</id>
+    <published>2015-11-27T16:00:00.000Z</published>
+    <updated>2015-11-28T01:44:22.681Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://img.my.csdn.net/uploads/201107/21/0_1311218496eXch.gif" alt=""><br>如上图所示，单位圆的内接正$n$边形的周长为$2nsin(\frac{\pi}{n})$，而单位圆的周长为$2\pi$，因此，我们有：<br>$$\pi=\lim_{n\to\infty}nsin(\frac{\pi}{n})$$</p>
+<a id="more"></a>
+<hr>
+<p>由$sin(x)$在$x$处的泰勒展开式$sin(x)=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\cdots$可知：<br>\begin{align}<br>\pi<br>&amp;=\lim_{n\to\infty}nsin(\frac{\pi}{n}) \\<br>&amp;=\lim_{n\to\infty}n(\frac{\pi}{n}-\frac{\pi^3}{3!n^3}+\frac{\pi^5}{5!n^5}-\cdots) \\<br>&amp;=\lim_{n\to\infty}(\pi-\frac{\pi^3}{3!n^2}+\frac{\pi^5}{5!n^4}-\cdots) \label{eq:T00} \\<br>&amp;=\pi+O((\frac{1}{n})^2)<br>\end{align}</p>
+<p>我们记其为$T_{0}^{(0)}$<br>在上述正$n$变形的基础上，将圆继续用正$2n$变形割细，则可得正$2n$变形的周长为$4nsin(\frac{\pi}{2n})$，所以：<br>\begin{align}<br>\pi<br>&amp;=\lim_{n\to\infty}2nsin(\frac{\pi}{2n}) \\<br>&amp;=\lim_{n\to\infty}（\pi-\frac{\pi^3}{3!(2n)^2}+\frac{\pi^5}{5!(2n)^4}-\cdots） \\<br>&amp;=\pi+\lim_{n\to\infty}（-\frac{\pi^3}{3!4n^2}+\frac{\pi^5}{5!16n^4}-\cdots）\label{eq:T01} \\<br>&amp;=\pi+O((\frac{1}{n})^2)<br>\end{align}<br>上式记为$T_{0}^{(1)}$。<br>做运算$\frac{\eqref{eq:T01}×4-\eqref{eq:T00}}{3}$可得：<br>\begin{align}<br>\pi<br>&amp;=\pi+\lim_{n\to\infty}（-\frac{\pi^5}{5!4n^4}-\cdots） \label{eq:T11}  \\<br>&amp;=\pi+O((\frac{1}{n})^4)<br>\end{align}<br>上式记为$T_{1}^{(1)}$。由上述计算过程可知，利用理查森（Richardson）外推算法将$\pi$的误差阶由$O((\frac{1}{n})^2)$提高到$O((\frac{1}{n})^4)$，从而提高计算精度。重复上述过程可得：<br><img src="http://ww2.sinaimg.cn/large/84262938jw1eygedxucx9j20k7077dg9.jpg" alt=""><br>其中：<br>\begin{align}<br>&amp;T_{0}^{(0)} = 3sin(\frac{\pi}{3}) \\<br>&amp;T_{0}^{(1)} = 6sin(\frac{\pi}{6}) \\<br>&amp;T_{0}^{(2)} = 12sin(\frac{\pi}{12}) \\<br>&amp;T_{1}^{(0)} = \frac{1}{3}(4T_{0}^{(1)}-T_{0}^{(0)})\\<br>&amp;T_{1}^{(1)} = \frac{1}{3}(4T_{0}^{(2)}-T_{0}^{(1)})\\<br>&amp;T_{2}^{(0)} = \frac{1}{15}(16T_{1}^{(1)}-T_{1}^{(0)})<br>\end{align}</p>
+<p>所以可得$\pi$的近似值为:3.14158。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="http://img.my.csdn.net/uploads/201107/21/0_1311218496eXch.gif" alt=""><br>如上图所示，单位圆的内接正$n$边形的周长为$2nsin(\frac{\pi}{n})$，而单位圆的周长为$2\pi$，因此，我们有：<br>$$\pi=\lim_{n\to\infty}nsin(\frac{\pi}{n})$$</p>]]>
+    
+    </summary>
+    
+      <category term="π" scheme="http://yoursite.com/tags/%CF%80/"/>
+    
+      <category term="外推法" scheme="http://yoursite.com/tags/%E5%A4%96%E6%8E%A8%E6%B3%95/"/>
+    
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[范数 & 条件数]]></title>
+    <link href="http://yoursite.com/2015/10/22/%E8%8C%83%E6%95%B0%20&%20%E6%9D%A1%E4%BB%B6%E6%95%B0/"/>
+    <id>http://yoursite.com/2015/10/22/范数 & 条件数/</id>
+    <published>2015-10-21T16:00:00.000Z</published>
+    <updated>2015-11-27T11:56:27.710Z</updated>
+    <content type="html"><![CDATA[<p><img src="https://ccjou.files.wordpress.com/2013/08/p-norm.gif?w=448&amp;h=336" alt=""></p>
+<h2 id="参考文献">参考文献</h2><p><a href="https://ccjou.wordpress.com/2013/08/13/%E5%90%91%E9%87%8F%E7%AF%84%E6%95%B8/" target="_blank" rel="external">向量範數| 線代啟示錄</a><br><a href="https://ccjou.wordpress.com/2010/05/10/%E7%9F%A9%E9%99%A3%E6%A8%A1/" target="_blank" rel="external">矩陣範數| 線代啟示錄</a><br><a href="https://ccjou.wordpress.com/2010/07/01/%E6%A2%9D%E4%BB%B6%E6%95%B8/" target="_blank" rel="external">條件數| 線代啟示錄</a><br><a href="https://ccjou.wordpress.com/2015/09/04/%E6%AD%90%E5%B9%BE%E9%87%8C%E5%BE%97%E7%A9%BA%E9%96%93%E7%9A%84%E6%95%B8%E5%AD%B8%E7%B5%90%E6%A7%8B/" target="_blank" rel="external">歐幾里得空間的數學結構| 線代啟示錄</a><br><a href="http://zhidao.baidu.com/question/204485716.html" target="_blank" rel="external">向量的p范数 证明 百度知道</a></p>
+<a id="more"></a>
+<hr>
+<h2 id="向量范数">向量范数</h2><h3 id="理解">理解</h3><p>三维空间中向量长度的推广</p>
+<h3 id="定义">定义</h3><h4 id="正定性（非负性）">正定性（非负性）</h4><p>$$|x|\geqslant0 （当且仅当x=0时|x|=0）$$</p>
+<h4 id="齐次性（均匀性）">齐次性（均匀性）</h4><p>$$|\alpha x|=|\alpha| |x|$$</p>
+<h4 id="次可加性（三角不等式）">次可加性（三角不等式）</h4><p>$$|x+y|\leqslant|x|+|y|$$</p>
+<h3 id="向量的范数">向量的范数</h3><h4 id="p-范数">p-范数</h4><p>$$|x|_p=(\sum_{i=1}^{n}|x_i|^p)^{1/p}$$</p>
+<h4 id="1-范数">1-范数</h4><p>$$|x|_1=\sum_{i=1}^{n}|x_i|$$</p>
+<h4 id="2-范数(欧式范数)">2-范数(欧式范数)</h4><p>$$|x|_2=(\sum_{i=1}^{n}|x_i|^2)^{1/2}$$</p>
+<h4 id="∞-范数(最大范数)">∞-范数(最大范数)</h4><p>$$|x|_\infty=\lim_{p\rightarrow\infty}(\sum_{i=1}^{n}|x_i|^p)^{1/p}=\max_{1\leqslant i \leqslant n}|x_i|$$</p>
+<blockquote>
+<p><code>证明</code>:<br>记$t=\max_{1\leqslant i \leqslant n}|x_i|$，则有:<br>\begin{align}<br>    \eqalign{<br>     |x|_\infty&amp; =\lim_{p\rightarrow\infty}(|x_1|^p+|x_2|^p+\ldots+|x_n|^p)^{1/p}\\<br>                 &amp; =t\lim_{p\rightarrow\infty}(|\frac{x_1}{t}|^p+|\frac{x_2}{t}|^p+\ldots+|\frac{x_n}{t}|^p)^{1/p}\\<br>                 &amp; =t<br>    }<br>\end{align}<br>上式中，运用到了夹逼准则：<br>$$\lim_{p\rightarrow\infty}1^{1/p}\leqslant\lim_{p\rightarrow\infty}(|\frac{x_1}{t}|^p+|\frac{x_2}{t}|^p+\ldots+|x_n|^p)^{1/p}\leqslant\lim_{p\rightarrow\infty}n^{1/p}$$<br>而<br>$$\lim_{p\rightarrow\infty}1^{1/p}=\lim_{p\rightarrow\infty}n^{1/p}=1$$</p>
+</blockquote>
+<h3 id="性质与应用">性质与应用</h3><h4 id="向量范数的等价性">向量范数的等价性</h4><p>$$c_1\leqslant\frac{|x|_s}{|x|_t}\leqslant c_2  (c_1,c_2&gt;0)$$</p>
+<blockquote>
+<p><code>证明</code><br>只要就$|x|_s=|x|_\infty$证明上式成立即可，即证明存在常数$c_1,c_2&gt;0$，使<br>$$c_1\leqslant\frac{|x|_s}{|x|_\infty}\leqslant c_2  (对一切x\in R^n且x\neq0)$$<br>考虑函数<br>$$$$</p>
+</blockquote>
+<h4 id="向量的极限">向量的极限</h4><p>$$\lim_{k\rightarrow\infty}x_i^{(k)}=x_i^{*}$$</p>
+<h4 id="向量范数的连续性">向量范数的连续性</h4><blockquote>
+<p><code>证明</code></p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="https://ccjou.files.wordpress.com/2013/08/p-norm.gif?w=448&amp;h=336" alt=""></p>
+<h2 id="参考文献">参考文献</h2><p><a href="https://ccjou.wordpress.com/2013/08/13/%E5%90%91%E9%87%8F%E7%AF%84%E6%95%B8/">向量範數| 線代啟示錄</a><br><a href="https://ccjou.wordpress.com/2010/05/10/%E7%9F%A9%E9%99%A3%E6%A8%A1/">矩陣範數| 線代啟示錄</a><br><a href="https://ccjou.wordpress.com/2010/07/01/%E6%A2%9D%E4%BB%B6%E6%95%B8/">條件數| 線代啟示錄</a><br><a href="https://ccjou.wordpress.com/2015/09/04/%E6%AD%90%E5%B9%BE%E9%87%8C%E5%BE%97%E7%A9%BA%E9%96%93%E7%9A%84%E6%95%B8%E5%AD%B8%E7%B5%90%E6%A7%8B/">歐幾里得空間的數學結構| 線代啟示錄</a><br><a href="http://zhidao.baidu.com/question/204485716.html">向量的p范数 证明 百度知道</a></p>]]>
+    
+    </summary>
+    
+      <category term="条件数" scheme="http://yoursite.com/tags/%E6%9D%A1%E4%BB%B6%E6%95%B0/"/>
+    
+      <category term="范数" scheme="http://yoursite.com/tags/%E8%8C%83%E6%95%B0/"/>
+    
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[【读书笔记】线性代数——李尚志]]></title>
+    <link href="http://yoursite.com/2015/10/16/%E3%80%90%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%91%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%80%94%E2%80%94%E6%9D%8E%E5%B0%9A%E5%BF%97/"/>
+    <id>http://yoursite.com/2015/10/16/【读书笔记】线性代数——李尚志/</id>
+    <published>2015-10-15T16:00:00.000Z</published>
+    <updated>2015-10-16T10:26:03.648Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://ec4.images-amazon.com/images/I/51cohTM8YxL._SX364_BO1,204,203,200_.jpg" alt=""></p>
+<p>行列式为什么要这样定义？矩阵为什么要这样相乘？向量到底是有方向大小的量，还是数组，还是定义了加法和数乘的任意非空集合中的元素？线性相关、现行无关是什么意思，有什么用处？</p>
+<a id="more"></a>
+<hr>
+<h2 id="前言">前言</h2><blockquote>
+<p>从不同的事情中发现共同点，研究共同点，得到放之四海而皆准的真理，用到更多的不同事物中去，这就是<code>抽象</code>。这样的抽象不是没有用处，反而神通广大。数学由低级到高级的过程，就是抽象的程度由低到高的过程，也就是应用的范围由狭窄到广泛的过程。</p>
+<p>书上为什么要写这些内容？不写可不可以？书上为什么要写矩阵和向量空间？为什么要写线性相关和无关？可不可以删去？</p>
+<p><code>数学建模</code>的过程：将所要解决的问题（实际问题或者理论问题）用适当的数学语言加以描述，转换为数学问题（即数学模型），用一定的数学工具（已有的工具或发明新的工具）来加以解决，再将所得到的数学解翻译成原来问题的解。</p>
+<p><code>代数</code>和<code>几何</code>相互渗透不可分割，这是线性代数的一个基本特点。线性代数名曰代数，其实也是几何。在某种意义上可以说：空间解析几何是3维空间的线性代数，而线性代数是n维空间的解析几何。线性代数的主要内容，可以用“空间为体，矩阵为用”来概括。它研究的对象是由向量组成的线性空间，这是几何对象。研究的工具则是矩阵，这是代数工具。</p>
+</blockquote>
+<h2 id="线性方程组的解法">线性方程组的解法</h2><blockquote>
+<p>线性代数就是“一次”代数，一个重要论题就是解多元一次方程组。</p>
+</blockquote>
+<h3 id="线性组合与同解变形——初等变换">线性组合与同解变形——初等变换</h3><h3 id="矩阵消元法">矩阵消元法</h3><h2 id="线性空间">线性空间</h2><blockquote>
+<p>线性代数处理的最重要的对象是<code>线性空间</code>，线性空间由<code>向量</code>组成。</p>
+</blockquote>
+<h3 id="什么是向量?">什么是向量?</h3><ul>
+<li>最初，我们将有方向有大小的量称为向量。向量按照平行四边形法则相加，向量乘实数是向量在原方向或相反方向的伸长或缩短。</li>
+<li>后来用坐标表示向量，向量的运算转化为坐标的运算。坐标就是有序数组，按分量相加以及与数相乘。</li>
+<li>线性方程也可以相加，可以乘常数，可以用数组表示，线性方程的加法与数乘也可以转化为数组的运算。</li>
+</ul>
+<blockquote>
+<p><strong>凡是可以进行加法和数乘的都是向量。</strong>当然，加法和数乘必须满足我们熟悉的那些运算律。</p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="http://ec4.images-amazon.com/images/I/51cohTM8YxL._SX364_BO1,204,203,200_.jpg" alt=""></p>
+<p>行列式为什么要这样定义？矩阵为什么要这样相乘？向量到底是有方向大小的量，还是数组，还是定义了加法和数乘的任意非空集合中的元素？线性相关、现行无关是什么意思，有什么用处？</p>]]>
+    
+    </summary>
+    
+      <category term="线性代数" scheme="http://yoursite.com/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
+    
+      <category term="读书笔记" scheme="http://yoursite.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="学习, 读书笔记" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hexo 搭建备忘]]></title>
+    <link href="http://yoursite.com/2015/10/14/Hexo%E6%90%AD%E5%BB%BA%E4%BF%A1%E6%81%AF%E5%A4%87%E5%BF%98/"/>
+    <id>http://yoursite.com/2015/10/14/Hexo搭建信息备忘/</id>
+    <published>2015-10-13T16:00:00.000Z</published>
+    <updated>2015-10-14T11:48:59.642Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://ww1.sinaimg.cn/large/84262938jw1ex0twrgud9j20go07awfa.jpg" alt=""></p>
+<p>这里记载了我这几天搭建Hexo的一些重要备忘信息。</p>
+<a id="more"></a>
+<hr>
+<h1 id="Hexo_代码">Hexo 代码</h1><h2 id="Hexo_deploy_身份验证">Hexo deploy 身份验证</h2><pre><code>git config --global user<span class="class">.name</span> <span class="string">"erofish"</span>
+git config --global user<span class="class">.email</span> <span class="string">"zhaishiba@gmail.com"</span>
+</code></pre><h2 id="设定目录为Hexo">设定目录为Hexo</h2><pre><code><span class="keyword">cd</span> <span class="keyword">d</span>:\Hexo
+</code></pre><h2 id="清理">清理</h2><pre><code><span class="title">hexo</span> clean
+</code></pre><h2 id="搭建">搭建</h2><pre><code><span class="title">hexo</span> g
+</code></pre><h2 id="本地预览（debug）">本地预览（debug）</h2><pre><code><span class="title">hexo</span> s
+</code></pre><blockquote>
+<p>当自己比较胸有成竹的时候,也可以清理搭建预览一步到位:</p>
+</blockquote>
+<pre><code>hexo clean &amp;&amp; hexo <span class="keyword">g</span> &amp;&amp; hexo <span class="literal">s</span>
+</code></pre><h2 id="上传Github">上传Github</h2><pre><code><span class="title">hexo</span> d
+</code></pre><blockquote>
+<p>同样,也可以清理搭建上传一步到位:</p>
+</blockquote>
+<pre><code>hexo clean &amp;&amp; hexo <span class="keyword">g</span> &amp;&amp; hexo <span class="literal">d</span>
+</code></pre><h1 id="Hexo主题">Hexo主题</h1><p>主题文件是<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">Next</a>，安装及配置方法详见：<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT 使用文档</a>。</p>
+<h1 id="配置文件">配置文件</h1><h2 id="站点配置文件：">站点配置文件：</h2><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># Site</span></span><br><span class="line">title: 十八仙僧の理想国</span><br><span class="line">subtitle: 思考 整理 分享</span><br><span class="line">description: 基因决定人, 环境决定成长, 平台决定层次, 机遇决定成就.</span><br><span class="line">author: 十八仙僧</span><br><span class="line">email: zhaishiba@gmail.com</span><br><span class="line">language: zh-Hans</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># URL</span></span><br><span class="line"><span class="preprocessor">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></span><br><span class="line">url: http:<span class="comment">//yoursite.com</span></span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Directory</span></span><br><span class="line">source_dir: source</span><br><span class="line">public_dir: <span class="keyword">public</span></span><br><span class="line">tag_dir: tags</span><br><span class="line">archive_dir: archives</span><br><span class="line">category_dir: categories</span><br><span class="line">code_dir: downloads/code</span><br><span class="line">i18n_dir: :lang</span><br><span class="line">skip_render:</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Writing</span></span><br><span class="line">new_post_name: :title.md # File name of <span class="keyword">new</span> posts</span><br><span class="line">default_layout: post</span><br><span class="line">titlecase: <span class="literal">false</span> # Transform title into titlecase</span><br><span class="line">external_link: <span class="literal">true</span> # Open external links in <span class="keyword">new</span> tab</span><br><span class="line">filename_case: <span class="number">0</span></span><br><span class="line">render_drafts: <span class="literal">false</span></span><br><span class="line">post_asset_folder: <span class="literal">false</span></span><br><span class="line">relative_link: <span class="literal">false</span></span><br><span class="line">future: <span class="literal">true</span></span><br><span class="line">highlight:</span><br><span class="line">  enable: <span class="literal">true</span></span><br><span class="line">  line_number: <span class="literal">true</span></span><br><span class="line">  auto_detect: <span class="literal">true</span></span><br><span class="line">  tab_replace:</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Category &amp; Tag</span></span><br><span class="line">default_category: uncategorized</span><br><span class="line">category_map:</span><br><span class="line">tag_map:</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Date / Time format</span></span><br><span class="line"><span class="preprocessor">## Hexo uses Moment.js to parse and display date</span></span><br><span class="line"><span class="preprocessor">## You can customize the date format as defined in</span></span><br><span class="line"><span class="preprocessor">## http://momentjs.com/docs/#/displaying/format/</span></span><br><span class="line">date_format: YYYY-MM-DD</span><br><span class="line">time_format: HH:mm:ss</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Pagination</span></span><br><span class="line"><span class="preprocessor">## Set per_page to 0 to disable pagination</span></span><br><span class="line">per_page: <span class="number">100</span></span><br><span class="line">pagination_dir: page</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Extensions</span></span><br><span class="line"><span class="preprocessor">## Plugins: http://hexo.io/plugins/</span></span><br><span class="line"><span class="preprocessor">## Themes: http://hexo.io/themes/</span></span><br><span class="line">theme: Next</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># ===================================================================================</span></span><br><span class="line"><span class="preprocessor">#主题配置段开始</span></span><br><span class="line"><span class="preprocessor">#====================================================================================</span></span><br><span class="line"></span><br><span class="line">avatar: http:<span class="comment">//ww4.sinaimg.cn/large/84262938gw1ewzxb252mwj20go0gomxh.jpg</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 多说评论系统</span></span><br><span class="line"><span class="preprocessor">#duoshuo_shortname: erofish</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 多说热评文章 true 或者 false</span></span><br><span class="line"><span class="preprocessor">#duoshuo_hotartical: true</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># DISQUS 帐号 （如果已经设置 多说 帐号，此选项将被跳过）</span></span><br><span class="line">disqus_shortname: erofish</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 百度分析ID</span></span><br><span class="line">baidu_analytics: <span class="number">3e0</span>f7bc4a598dfd178c5e45a195ba929</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 百度分享服务</span></span><br><span class="line">baidushare: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Swiftype Search Key</span></span><br><span class="line">swiftype_key: uBCMvYTzRxi2_CRLzt2g</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 站点起始时间</span></span><br><span class="line">since: <span class="number">2015</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 社交链接，将在侧栏中显示</span></span><br><span class="line">social:</span><br><span class="line">  GitHub: https:<span class="comment">//github.com/erofish</span></span><br><span class="line">  Weibo: http:<span class="comment">//weibo.com/erofish</span></span><br><span class="line">  ZhiHu: http:<span class="comment">//www.zhihu.com/people/erofish</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># ===================================================================================</span></span><br><span class="line"><span class="preprocessor">#主题配置段结束</span></span><br><span class="line"><span class="preprocessor"># ===================================================================================</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Deployment</span></span><br><span class="line"><span class="preprocessor">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:EroFish/erofish.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<h2 id="主题配置文件">主题配置文件</h2><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># when running hexo in a subdirectory (e.g. domain.tld/blog), remove leading slashes ( "/archives" -&gt; "archives" )</span></span><br><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  categories: /categories</span><br><span class="line">  #about: /about</span><br><span class="line">  archives: /archives</span><br><span class="line">  tags: /tags</span><br><span class="line">  #commonweal: /<span class="number">404.</span>html</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Place your favicon.ico to /source directory.</span></span><br><span class="line">favicon: /favicon.ico</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Set default keywords (Use a comma to separate)</span></span><br><span class="line">keywords: <span class="string">"Hexo,next"</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Set rss to false to disable feed link.</span></span><br><span class="line"><span class="preprocessor"># Leave rss as empty to use site's feed link.</span></span><br><span class="line"><span class="preprocessor"># Set rss to specific value if you have burned your feed already.</span></span><br><span class="line">rss:</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Icon fonts</span></span><br><span class="line"><span class="preprocessor"># Place your font into next/source/fonts, specify directory-name and font-name here</span></span><br><span class="line"><span class="preprocessor"># Avialable: default | linecons | fifty-shades | feather</span></span><br><span class="line">icon_font: <span class="keyword">default</span></span><br><span class="line"><span class="preprocessor">#icon_font: fifty-shades</span></span><br><span class="line"><span class="preprocessor">#icon_font: feather</span></span><br><span class="line"><span class="preprocessor">#icon_font: linecons</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Code Highlight theme</span></span><br><span class="line"><span class="preprocessor"># Available value: normal | night | night eighties | night blue | night bright</span></span><br><span class="line"><span class="preprocessor"># https://github.com/chriskempson/tomorrow-theme</span></span><br><span class="line">highlight_theme: normal</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># MathJax Support</span></span><br><span class="line">mathjax: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Schemes</span></span><br><span class="line">scheme: Mist</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Sidebar, available value:</span></span><br><span class="line"><span class="preprocessor">#  - post    expand on posts automatically. Default.</span></span><br><span class="line"><span class="preprocessor">#  - always  expand for all pages automatically</span></span><br><span class="line"><span class="preprocessor">#  - hide    expand only when click on the sidebar toggle icon.</span></span><br><span class="line"><span class="preprocessor">#sidebar: post</span></span><br><span class="line"><span class="preprocessor">#sidebar: always</span></span><br><span class="line">sidebar: hide</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Automatically scroll page to section which is under &lt;!-- more --&gt; mark.</span></span><br><span class="line">scroll_to_more: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Automatically add list number to toc.</span></span><br><span class="line">toc_list_number: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Automatically Excerpt</span></span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: <span class="literal">false</span></span><br><span class="line">  length: <span class="number">150</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Use Lato font</span></span><br><span class="line"><span class="preprocessor"># Note: this option is avialable only when the language is not `zh-Hans`</span></span><br><span class="line">use_font_lato: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Make duoshuo show UA</span></span><br><span class="line"><span class="preprocessor"># user_id must NOT be null when admin_enable is true!</span></span><br><span class="line"><span class="preprocessor"># you can visit http://dev.duoshuo.com get duoshuo user id.</span></span><br><span class="line">duoshuo_info:</span><br><span class="line">  ua_enable: <span class="literal">true</span></span><br><span class="line">  admin_enable: <span class="literal">false</span></span><br><span class="line">  user_id: <span class="number">0</span></span><br><span class="line">  #admin_nickname: ROOT</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">## DO NOT EDIT THE FOLLOWING SETTINGS</span></span><br><span class="line"><span class="preprocessor">## UNLESS YOU KNOW WHAT YOU ARE DOING</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Use velocity to animate everything.</span></span><br><span class="line">use_motion: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Fancybox</span></span><br><span class="line">fancybox: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Static files</span></span><br><span class="line">vendors: vendors</span><br><span class="line">css: css</span><br><span class="line">js: js</span><br><span class="line">images: images</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Theme version</span></span><br><span class="line">version: <span class="number">0.4</span><span class="number">.5</span><span class="number">.1</span></span><br></pre></td></tr></table></figure>
+<h1 id="小书匠新建文章模板">小书匠新建文章模板</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">---</span></span><br><span class="line"><span class="rule"><span class="attribute">title</span>:<span class="value">  新建文件</span><br><span class="line">date: &lt;% <span class="function">print</span>((new <span class="function">Date</span>()).<span class="function">getFullYear</span>().<span class="function">toString</span>()+ <span class="string">'-'</span>+ ((new <span class="function">Date</span>()).<span class="function">getMonth</span>() + <span class="number">1</span>).<span class="function">toString</span>() + <span class="string">'-'</span>+ (new <span class="function">Date</span>()).<span class="function">getDate</span>().<span class="function">toString</span>())</span></span>; %&gt;</span><br><span class="line"><span class="rule"><span class="attribute">tags</span>:<span class="value"> [生活, 学习]</span><br><span class="line">categories: 默认</span><br><span class="line">toc: true </span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">![][<span class="number">4</span>]</span><br><span class="line"></span><br><span class="line">这里是文章的封面、引言（摘要）。</span><br><span class="line"></span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line"></span><br><span class="line">----------</span></span></span><br></pre></td></tr></table></figure>
+<h1 id="图床">图床</h1><p>使用的<a href="https://chrome.google.com/webstore/detail/%E6%96%B0%E6%B5%AA%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A/fdfdnfpdplfbbnemmmoklbfjbhecpnhf" target="_blank" rel="external">新浪微博图床</a>。</p>
+<h1 id="记录工具与习惯">记录工具与习惯</h1><p>工具推荐使用<a href="http://soft.xiaoshujiang.com/" target="_blank" rel="external">小书匠</a> + <a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">CMD MarkDown</a>。对于一些日常功能，小书匠足以应对。但是碰到一些需要书写数学公式的场合，小书匠自带的MathJax插件显得有点难以适用.这时候推荐使用CMD Markdown。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="http://ww1.sinaimg.cn/large/84262938jw1ex0twrgud9j20go07awfa.jpg" alt=""></p>
+<p>这里记载了我这几天搭建Hexo的一些重要备忘信息。</p>]]>
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="备忘" scheme="http://yoursite.com/tags/%E5%A4%87%E5%BF%98/"/>
+    
+      <category term="默认" scheme="http://yoursite.com/categories/%E9%BB%98%E8%AE%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hexo 中利用 Mathjax 书写公式]]></title>
+    <link href="http://yoursite.com/2015/10/14/Hexo%20%E4%B8%AD%E5%88%A9%E7%94%A8%20Mathjax%20%E4%B9%A6%E5%86%99%E5%85%AC%E5%BC%8F/"/>
+    <id>http://yoursite.com/2015/10/14/Hexo 中利用 Mathjax 书写公式/</id>
+    <published>2015-10-13T16:00:00.000Z</published>
+    <updated>2015-11-27T11:43:00.912Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://ww2.sinaimg.cn/large/84262938gw1ex0udhvabyj21820eowjb.jpg" alt=""></p>
+<p>科技文章的写作过程中会碰到许许多多的公式需要书写。这个问题困扰了我很久。在本地有MathType等一系列软件可以使用，Latex也有良好的本地支持，但是当我想在网上建立起自己的个人知识管理系统时却遇到了比较多的问题。这里做的是用Hexo + MathJax 录入数学公式的尝试。具体的讲解与方法参见sunxb10的<a href="http://sunxb10.github.io/2015/01/02/display-math-equations-with-hexo/" target="_blank" rel="external">这篇博文</a>。</p>
+<a id="more"></a>
+<hr>
+<h2 id="Next主题修改">Next主题修改</h2><p>每个主题对mathjax的修改方式不尽相同。我也是在多次尝试以后找到了针对Next主题的修改方式。(Next主题默认的mathjax不支持公式编号,所以我才对其进一步进行修改)。</p>
+<h3 id="用listary查找mathjax的文件">用listary查找mathjax的文件</h3><p>首先是在主题目录找到mathjax的文件。这里推荐用<a href="http://www.listary.com/" target="_blank" rel="external">listary</a>这款软件，在主题目录文件夹中按listary搜索快捷键(默认是<code>windows+~</code>好像,安装listary时一般会提醒设置)。</p>
+<p><img src="http://ww1.sinaimg.cn/large/84262938jw1ex9kkki5o9g20im0cotbm.gif" alt="利用listary查找mathjax文件"></p>
+<p>在Next主题中,我们发现mathjax的相关配置在mathjax.swig文件中，将其打开。</p>
+<h3 id="修改文件的代码">修改文件的代码</h3><p>将上述<a href="http://sunxb10.github.io/2015/01/02/display-math-equations-with-hexo/" target="_blank" rel="external">引用的博客</a>中的代码替换到自己主题的mathjax文件的适当位置。我这里是将那一串代码粘贴替换掉了<code>mathjax.swig</code>中原来的<script></script>标签中的内容，修改完成后保存即可。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if theme.mathjax %&#125;&#10;&#60;!-- MathJax Start --&#62;&#10;&#60;!-- MathJax documentation: http://docs.mathjax.org/en/latest/index.html --&#62;&#10;&#60;script type=&#34;text/x-mathjax-config&#34;&#62;&#10;  MathJax.Hub.Config(&#123;&#10;    tex2jax: &#123;  // tex2jax preprocessor&#10;      inlineMath: [ [&#39;$&#39;,&#39;$&#39;] ],  // delimiters for in-line math&#10;      displayMath: [ [&#39;$$&#39;,&#39;$$&#39;] ],  // delimiters for displayed equations&#10;      processEscapes: true,  // enable \$ to represent a single dollar sign&#10;      skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;, &#39;code&#39;]  // MathJax will not process contents inside these tags &#10;    &#125;,&#10;    TeX: &#123;  // TeX/LaTeX input processor&#10;      equationNumbers: &#123; autoNumber: &#34;AMS&#34; &#125;,  // only number those equations in specific AMSmath environments&#10;      extensions: [&#34;AMSmath.js&#34;,&#34;AMSsymbols.js&#34;,&#34;noErrors.js&#34;,&#34;noUndefined.js&#34;]  // introduce AMS extensions and suppress generating error messages &#10;    &#125;,&#10;    &#34;HTML-CSS&#34;: &#123;  // HTML-CSS output processor (this is the default output of MathJax)&#10;      scale: 110,  // The scaling factor of math with respect to the surrounding text&#10;      linebreaks: &#123; automatic: true &#125; // automatically breaks the line if necessary&#10;    &#125;,&#10;    SVG: &#123;  // SVG output processor&#10;      scale: 110,  // The scaling factor of math with respect to the surrounding text&#10;      linebreaks: &#123; automatic: true &#125; // automatically breaks the line if necessary&#10;    &#125;,&#10;    menuSettings: &#123;  // settings for the mathematics contextual menu&#10;      zoom: &#34;Hover&#34;  // set equation zooming to be triggered by a single mouse click&#10;    &#125;&#10;  &#125;);&#10; &#10;  MathJax.Hub.Queue(function() &#123; // Fix &#60;code&#62; tags after MathJax finishes running, this is a hack to overcome a shortcoming of Markdown&#10;      var all = MathJax.Hub.getAllJax(), i;&#10;      for(i=0; i &#60; all.length; i += 1) &#123;&#10;          all[i].SourceElement().parentNode.className += &#39; has-jax&#39;;&#10;      &#125;&#10;  &#125;);&#10;&#60;/script&#62;&#10;&#60;script type=&#34;text/javascript&#34;&#10;   src=&#34;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&#62;  // link to the MathJax CDN&#10;&#60;/script&#62;&#10;&#60;!-- MathJax End --&#62;&#10;&#10;&#60;script type=&#34;text/javascript&#34; src=&#34;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&#62;&#60;/script&#62;&#10;&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="效果测试">效果测试</h2><p>$E = m c^{2}$</p>
+<p>$a^{2} + b^{2} = c^{2}$</p>
+<p>$$f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}}$$</p>
+<p>$$v=\frac{\Delta s}{\Delta t}$$</p>
+<p>$$f<em>{n}=f</em>{n-1}+f_{n-2}$$</p>
+<p>$$f_{n}=f_{n-1}+f_{n-2}$$</p>
+<p>$$<br>\mathrm{e}^{i\theta}=\cos\theta+i\sin\theta\<br>\mathrm{e}^{i\pi}+1=0<br>$$</p>
+<p>$$<br>\mathrm{e}^{i\theta}=\cos\theta+i\sin\theta\\<br>\mathrm{e}^{i\pi}+1=0<br>$$</p>
+<p>\begin{equation}<br>f_{0} = 1\\<br>f_{1} = 1\\<br>f_{n} = f_{n-1} + f_{n-2}\quad (n&gt;1)<br>\end{equation}</p>
+<p>\begin{align}<br>\begin{vmatrix}<br>1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 \\<br>a_{1} &amp; a_{2} &amp; a_{3} &amp; \cdots &amp; a_{n} \\<br>a_{1}^{2} &amp; a_{2}^{2} &amp; a_{3}^{2} &amp; \cdots &amp; a_{n}^{2} \\<br>a_{1}^{3} &amp; a_{2}^{3} &amp; a_{3}^{3} &amp; \cdots &amp; a_{n}^{3} \\<br>\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\<br>a_{1}^{n−1} &amp; a_{2}^{n−1} &amp; a_{3}^{n−1} &amp; \cdots &amp; a_{n}^{n−1}<br>\end{vmatrix} = \prod_{1\leqslant{}j &lt; i\leqslant{}n}(a_{i}−a_{j})<br>\end{align}</p>
+<p>\begin{align}<br>&amp;e^{i\pi} + 1 = 0 \label{eq:Euler}\\<br>&amp;\hat{H}\Psi = i\hbar\frac{\partial}{\partial t}\Psi \label{eq:Schrödinger}\\<br>&amp;\sqrt{1 + 2\sqrt{1 + 3\sqrt{1 + 4\sqrt{1 + \cdots}}}} = 3 \label{eq:Ramanujan}<br>\end{align}</p>
+<p>\eqref{eq:Euler}式是欧拉公式<br>\eqref{eq:Schrödinger}式是薛定谔方程<br>\eqref{eq:Ramanujan}式是拉马努金恒等式</p>
+<p>\begin{align*}<br>&amp;\nabla \cdot \boldsymbol{E} = \frac{\rho}{\varepsilon_{0}} \\<br>&amp;\nabla \cdot \boldsymbol{B} = 0 \\<br>&amp;\nabla \times \boldsymbol{E} = -\frac{\partial\boldsymbol{B}}{\partial t} \\<br>&amp;\nabla \times \boldsymbol{B} = \mu_{0} \boldsymbol{J} + \mu_{0}\varepsilon_{0}\frac{\partial\boldsymbol{E}}{\partial t}<br>\end{align*}</p>
+<p>\begin{align}<br>E &amp;= mc^{2} \notag \\<br>E &amp;= h\nu \notag \\<br>m &amp;= h\nu/c^{2}<br>\end{align}</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="http://ww2.sinaimg.cn/large/84262938gw1ex0udhvabyj21820eowjb.jpg" alt=""></p>
+<p>科技文章的写作过程中会碰到许许多多的公式需要书写。这个问题困扰了我很久。在本地有MathType等一系列软件可以使用，Latex也有良好的本地支持，但是当我想在网上建立起自己的个人知识管理系统时却遇到了比较多的问题。这里做的是用Hexo + MathJax 录入数学公式的尝试。具体的讲解与方法参见sunxb10的<a href="http://sunxb10.github.io/2015/01/02/display-math-equations-with-hexo/">这篇博文</a>。</p>]]>
+    
+    </summary>
+    
+      <category term="学习" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="默认" scheme="http://yoursite.com/categories/%E9%BB%98%E8%AE%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[hexo 中添加音乐 视频等多媒体文件]]></title>
+    <link href="http://yoursite.com/2015/10/12/hexo%20%E4%B8%AD%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%20%E8%A7%86%E9%A2%91%E7%AD%89%E5%A4%9A%E5%AA%92%E4%BD%93%E6%96%87%E4%BB%B6/"/>
+    <id>http://yoursite.com/2015/10/12/hexo 中添加音乐 视频等多媒体文件/</id>
+    <published>2015-10-11T17:48:44.000Z</published>
+    <updated>2015-10-14T10:12:54.626Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://blog.formstack.com/wp-content/uploads/2012/09/iframe1-620x320.jpg" alt=""></p>
+<p>在写博客的时候不可避免地会遇到引用一些多媒体文件的地方，常用的方法是将相关多媒体文件的网址直接在博文内做个超链接，但是这样跳来跳去总归有些不便。今天就博文内部的多媒体引用作了一些尝试, 现将代码记录如下, 方便以后自己使用。</p>
+<a id="more"></a>
+<hr>
+<h1 id="前言">前言</h1><p>如果使用的是chrome浏览器，可能会遇到加载不出多媒体文件的问题。这时候只要单击搜索框右侧小盾牌，添加信任，让脚本文件正常运行即可。</p>
+<p><img src="http://ww2.sinaimg.cn/large/84262938gw1ex0kw5kqsog20fk08rgnt.gif" alt=""></p>
+<h1 id="插入音频">插入音频</h1><h2 id="网易云音乐">网易云音乐</h2><h3 id="官方版">官方版</h3><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=20744782&auto=1&height=66"></iframe>
+
+<p>代码:</p>
+<pre><code>&lt;<span class="tag">iframe</span> frameborder=<span class="string">"no"</span> <span class="attribute">border</span>=<span class="string">"0"</span> marginwidth=<span class="string">"0"</span> marginheight=<span class="string">"0"</span> <span class="attribute">width</span>=<span class="number">330</span> <span class="attribute">height</span>=<span class="number">86</span> src=<span class="string">"http://music.163.com/outchain/player?type=2&amp;id=20744782&amp;auto=1&amp;height=66"</span>&gt;&lt;/iframe&gt;
+</code></pre><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="450" src="http://music.163.com/outchain/player?type=0&id=91280726&auto=0&height=430"></iframe>
+
+<p>代码:</p>
+<pre><code>&lt;<span class="tag">iframe</span> frameborder=<span class="string">"no"</span> <span class="attribute">border</span>=<span class="string">"0"</span> marginwidth=<span class="string">"0"</span> marginheight=<span class="string">"0"</span> <span class="attribute">width</span>=<span class="number">330</span> <span class="attribute">height</span>=<span class="number">450</span> src=<span class="string">"http://music.163.com/outchain/player?type=0&amp;id=91280726&amp;auto=0&amp;height=430"</span>&gt;&lt;/iframe&gt;
+</code></pre><h3 id="网友版">网友版</h3><iframe src="http://musicbox.coding.io/m163player/111677" frameborder="0" scrolling="0" width="430" height="200" allowtransparency=""></iframe>
+
+<p>代码: (via: <a href="http://miantiao.me/a-html5-netease-music-player.html" target="_blank" rel="external">HTML5 版网易云音乐外链播放器</a>)</p>
+<pre><code>&lt;<span class="tag">iframe</span> src=<span class="string">"http://musicbox.coding.io/m163player/20744782"</span> frameborder=<span class="string">"0"</span> scrolling=<span class="string">"0"</span> <span class="attribute">width</span>=<span class="string">"430"</span> <span class="attribute">height</span>=<span class="string">"200"</span> allowtransparency&gt;&lt;/iframe&gt;
+</code></pre><h2 id="虾米音乐">虾米音乐</h2><h3 id="官方版-1">官方版</h3><embed src="http://www.xiami.com/widget/11485616_423326_235_346_FF8719_494949/albumPlayer.swf" type="application/x-shockwave-flash" width="235" height="346" wmode="transparent">
+
+<p>代码: </p>
+<pre><code><span class="tag">&lt;<span class="title">embed</span> <span class="attribute">src</span>=<span class="value">"http://www.xiami.com/widget/11485616_423326_235_346_FF8719_494949/albumPlayer.swf"</span> <span class="attribute">type</span>=<span class="value">"application/x-shockwave-flash"</span> <span class="attribute">width</span>=<span class="value">"235"</span> <span class="attribute">height</span>=<span class="value">"346"</span> <span class="attribute">wmode</span>=<span class="value">"transparent"</span>&gt;</span><span class="tag">&lt;/<span class="title">embed</span>&gt;</span>
+</code></pre><h3 id="网友版-1">网友版</h3><iframe src="http://musicbox.coding.io/xiamiplayer/45819" frameborder="0" scrolling="0" width="430" height="200" allowtransparency=""></iframe>
+
+<p>代码: (Via: <a href="http://miantiao.me/a-xiami-html5-player.html" target="_blank" rel="external">HTML5版虾米音乐外链播放器</a>)</p>
+<pre><code>&lt;<span class="tag">iframe</span> src=<span class="string">"http://musicbox.coding.io/xiamiplayer/45819"</span> frameborder=<span class="string">"0"</span> scrolling=<span class="string">"0"</span> <span class="attribute">width</span>=<span class="string">"430"</span> <span class="attribute">height</span>=<span class="string">"200"</span> allowtransparency&gt;&lt;/iframe&gt;
+</code></pre><h1 id="视频">视频</h1><h2 id="优酷">优酷</h2><iframe height="498" width="510" src="http://player.youku.com/embed/XNjcyMDU4Njg0" frameborder="0" allowfullscreen></iframe>
+
+<p>代码:</p>
+<pre><code><span class="tag">&lt;<span class="title">iframe</span> <span class="attribute">height</span>=<span class="value">498</span> <span class="attribute">width</span>=<span class="value">510</span> <span class="attribute">src</span>=<span class="value">"http://player.youku.com/embed/XNjcyMDU4Njg0"</span> <span class="attribute">frameborder</span>=<span class="value">0</span> <span class="attribute">allowfullscreen</span>&gt;</span><span class="tag">&lt;/<span class="title">iframe</span>&gt;</span>
+</code></pre><h2 id="acfun">acfun</h2><iframe style="width:704px;height:436px;" src="https://ssl.acfun.tv/block-player-homura.html#vid=2774339;from=http://www.acfun.tv" id="ACFlashPlayer-re" frameborder="0"></iframe>
+
+<p>代码:</p>
+<pre><code><span class="tag">&lt;<span class="title">iframe</span> <span class="attribute">height</span>=<span class="value">498</span> <span class="attribute">width</span>=<span class="value">510</span> <span class="attribute">src</span>=<span class="value">"http://player.youku.com/embed/XNjcyMDU4Njg0"</span> <span class="attribute">frameborder</span>=<span class="value">0</span> <span class="attribute">allowfullscreen</span>&gt;</span><span class="tag">&lt;/<span class="title">iframe</span>&gt;</span>
+</code></pre><h2 id="哔哩哔哩">哔哩哔哩</h2><embed width="480" height="400" src="http://static.hdslb.com/miniloader.swf?aid=3031758&amp;page=1" type="application/x-shockwave-flash" wmode="transparent" quality="high" allowscriptaccess="never">
+
+<p>代码:</p>
+<pre><code>&lt;embed width=<span class="string">"480"</span> height=<span class="string">"400"</span> src=<span class="string">"http://static.hdslb.com/miniloader.swf?aid=3031758&amp;amp;page=1"</span> <span class="class"><span class="keyword">type</span></span>=<span class="string">"application/x-shockwave-flash"</span> wmode=<span class="string">"transparent"</span> quality=<span class="string">"high"</span> allowscriptaccess=<span class="string">"never"</span> /&gt;
+</code></pre><h2 id="Youtube">Youtube</h2><iframe width="560" height="315" src="https://www.youtube.com/embed/MpGPrhsTjPY" frameborder="0" allowfullscreen></iframe>
+
+<h2 id="制成GIF">制成GIF</h2><p>对于一些简短小巧的视频，可以将它们制成GIF图片，然后上传到<a href="https://chrome.google.com/webstore/detail/fdfdnfpdplfbbnemmmoklbfjbhecpnhf" target="_blank" rel="external">新浪微博图床</a>。制作GIF的工具推荐使用Gifcam。</p>
+<p><img src="http://blog.bahraniapps.com/wp-content/uploads/2013/03/gifcamaiming.gif" alt="Gifcam"></p>
+<p>代码:</p>
+<pre><code>&lt;<span class="tag">iframe</span> <span class="attribute">width</span>=<span class="string">"560"</span> <span class="attribute">height</span>=<span class="string">"315"</span> src=<span class="string">"https://www.youtube.com/embed/MpGPrhsTjPY"</span> frameborder=<span class="string">"0"</span> allowfullscreen&gt;&lt;/iframe&gt;
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="http://blog.formstack.com/wp-content/uploads/2012/09/iframe1-620x320.jpg" alt=""></p>
+<p>在写博客的时候不可避免地会遇到引用一些多媒体文件的地方，常用的方法是将相关多媒体文件的网址直接在博文内做个超链接，但是这样跳来跳去总归有些不便。今天就博文内部的多媒体引用作了一些尝试, 现将代码记录如下, 方便以后自己使用。</p>]]>
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="MarkDown" scheme="http://yoursite.com/tags/MarkDown/"/>
+    
+      <category term="多媒体" scheme="http://yoursite.com/tags/%E5%A4%9A%E5%AA%92%E4%BD%93/"/>
+    
+      <category term="默认" scheme="http://yoursite.com/categories/%E9%BB%98%E8%AE%A4/"/>
+    
+  </entry>
+  
+</feed>
