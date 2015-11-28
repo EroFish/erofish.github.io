@@ -41,6 +41,42 @@
   </entry>
   
   <entry>
+    <title><![CDATA[重温微积分]]></title>
+    <link href="http://yoursite.com/2015/11/28/%E9%87%8D%E6%B8%A9%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
+    <id>http://yoursite.com/2015/11/28/重温微积分/</id>
+    <published>2015-11-27T16:00:00.000Z</published>
+    <updated>2015-11-28T02:48:09.036Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://www.hep.com.cn/cover/book/529b6050-1414-1000-8aa8-3fafc67de19c" alt=""></p>
+<p>数学既不是它（物理）的“加工订货”的产物，也不简单是工具或语言，而是与物理学以不同角度，用不同方法，但是又互相携手，共同研究大自然。我想，应该使许多大学生知道这是多么吸引人的事业。并且希望他们中间有些人能走上这条路。</p>
+<p>数学懂得越多，从直觉里得到益处也越多，至少是受“严格性不足”危害越少。……越往后走，越深入数学和物理学，您会得到越大的“自由”。</p>
+<p>我的一位老师当年就告诉过我，年轻时代思想最敏锐，即令一时不懂，将来再接触到会有似曾相识之感，对自己大有好处。</p>
+<a id="more"></a>
+<hr>
+<h2 id="一、变量的数学">一、变量的数学</h2><h3 id="$\epsilon-\delta$语言">$\epsilon-\delta$语言</h3><p>初等数学是常量的数学，高等数学是变量的数学。</p>
+<h3 id="$\sqrt{2}$,_无理数,_连续">$\sqrt{2}$, 无理数, 连续</h3><p>有理数本质上只可用于刻画离散的对象，而几何图形如线段等等本质上却是连续的。</p>
+<h3 id="芝诺悖论，阿基里斯与乌龟，无穷级数">芝诺悖论，阿基里斯与乌龟，无穷级数</h3><p>阿基里斯的速度比乌龟快10倍，但是他让乌龟先走了100米。当阿基里斯追了这100米时，乌龟又向前走了10米，当阿基里斯追上这10米时，乌龟又向前走了1米。如此进行下去直至无穷，阿基里斯是永远追不上乌龟的。</p>
+<p>若阿基里斯的速度为$v$，则乌龟的速度是$v/10$。当阿基里斯追到乌龟的出发点时，他用了时间$100/v=T$。而在这个时间里，乌龟向前走了$vT/10$，以此类推，阿基里德（追上乌龟）所用的时间是：<br>$$T+\frac{T}{10}+\frac{T}{10^2}+…=T\sum_{n=0}^{\infty}\frac{1}{10^n}=\frac{10}{9}T$$</p>
+<h3 id="割圆术，穷竭法，π">割圆术，穷竭法，π</h3><blockquote>
+<p><strong>定理</strong> 圆与圆之比等于其直径上的正方形之比。（《几何原本》，卷 Ⅶ，2）<br><img src="http://image.sciencenet.cn/album/201403/15/083123lebu4eu4u54zi5e6.jpg" alt=""></p>
+</blockquote>
+<p><a href="http://blog.sciencenet.cn/blog-275648-776036.html" target="_blank" rel="external">！事非经过不知难——对祖冲之确定圆周率之揣测</a></p>
+<p>我个人的一些补充理解：  <a href="https://www.zybuluo.com/erofish/note/228994" target="_blank" rel="external">用计算方法中的外推法来计算π的近似值</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="http://www.hep.com.cn/cover/book/529b6050-1414-1000-8aa8-3fafc67de19c" alt=""></p>
+<p>数学既不是它（物理）的“加工订货”的产物，也不简单是工具或语言，而是与物理学以不同角度，用不同方法，但是又互相携手，共同研究大自然。我想，应该使许多大学生知道这是多么吸引人的事业。并且希望他们中间有些人能走上这条路。</p>
+<p>数学懂得越多，从直觉里得到益处也越多，至少是受“严格性不足”危害越少。……越往后走，越深入数学和物理学，您会得到越大的“自由”。</p>
+<p>我的一位老师当年就告诉过我，年轻时代思想最敏锐，即令一时不懂，将来再接触到会有似曾相识之感，对自己大有好处。</p>]]>
+    
+    </summary>
+    
+      <category term="重温微积分" scheme="http://yoursite.com/tags/%E9%87%8D%E6%B8%A9%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
+    
+      <category term="学习，读书笔记" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%EF%BC%8C%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[范数 & 条件数]]></title>
     <link href="http://yoursite.com/2015/10/22/%E8%8C%83%E6%95%B0%20&%20%E6%9D%A1%E4%BB%B6%E6%95%B0/"/>
     <id>http://yoursite.com/2015/10/22/范数 & 条件数/</id>
