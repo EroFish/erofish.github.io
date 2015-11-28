@@ -1055,7 +1055,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #20ff94;
+  background: #e4ffb4;
 }
 .sidebar-nav {
   margin: 0;
@@ -1193,6 +1193,10 @@ body {
   }
   .footer-inner {
     padding: 0 10px;
+  }
+  .copyright {
+    width: 90%;
+    padding: 0.5em 1.3em;
   }
 }
 .btn {
@@ -1860,6 +1864,30 @@ body {
 }
 .page-post-detail .comments {
   overflow: hidden;
+}
+.copyright {
+  width: 85%;
+  margin: 0px auto;
+  max-width: 45em;
+  word-break: break-all;
+  font-size: 0.93em;
+  line-height: 1.6em;
+  padding: 0.5em 1.8em;
+  background: rgba(255,255,255,0.4);
+  border: 1px solid #d3d3d3;
+}
+.copyright span {
+  color: #b5b5b5;
+  font-weight: bold;
+  margin-right: 1em;
+}
+.copyright a {
+  color: #808080;
+}
+.copyright a:hover {
+  font-weight: bold;
+  color: #a3d2a3;
+  text-decoration: underline;
 }
 .category-all-page .category-all-title {
   text-align: center;
